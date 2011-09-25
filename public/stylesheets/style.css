@@ -61,3 +61,31 @@ p {
 
 header { margin-bottom: 0.3em; }
 footer { margin-top:0.3em; }
+
+.clone.done { 
+font-size: 1.5em;
+font-weight: 800;
+}
+
+.clone.space:after {
+  content: "\0000a0";
+}
+
+.clone.apos:after {
+  content: "'";
+}
+
+.clone.cap { text-transform: uppercase; }
+
+.clone.exclamation:after { 
+  content: "!";
+}
+
+.clone.comma:after {
+  content: ",\0000a0";
+}
+
+.clone.period:after {
+  content: ".\0000a0";
+}
+
