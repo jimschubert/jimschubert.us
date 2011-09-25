@@ -5,10 +5,19 @@ body {
   color: rgba(0,0,0,0.8);
 }
 
+.notice {
+  background: #FCE9C0 url(/images/alert-icon.png) left no-repeat;
+  background-position: 12px;
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  padding: 15px 50px;
+}
+
 a { color: rgba(0,50,220,0.9); }
 a[target="_blank"] { 
   padding: 0 15px 0 0; 
   background: url(/images/external.png) no-repeat right center;
+  margin: 0px 2px;
 }
 
 h1, h2, h3, h4, h5 { 
