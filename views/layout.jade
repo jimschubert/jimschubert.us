@@ -5,6 +5,7 @@ html
     script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js')
     link(rel='stylesheet', href='/stylesheets/reset.css')
     link(rel='stylesheet', href='/stylesheets/text.css')
+    script(type='text/javascript', src='/javascripts/jquery.easing.1.3.js')
     // script(type='text/javascript', src='https://raw.github.com/jimschubert/brushes.js/master/src/brushes.js')
     link(rel='stylesheet', href='/stylesheets/960.css')
     link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Antic|Black+Ops+One')
@@ -15,12 +16,12 @@ html
     #wrapper
       canvas#canvas
         span
-      header.container_12
+      #header.container_12
         #logo.grid_2
         #intro.grid_10
           | Jim Schubert, Software Developer
       #content.container_12!= body
-      footer.container_12
+      #footer.container_12
         .grid_4 
           p Jim Schubert
           p james.schubert@gmail.com

@@ -1,5 +1,5 @@
 $(function() {
-    $('header').mouseenter(function(e){
+    $('#header').mouseenter(function(e){
         $('.subliminal').remove();
         $('.content-inner').stop().show().css({opacity:'1.0'});
 
@@ -17,39 +17,41 @@ $(function() {
                 top: offset.top,
                 left: offset.left
             });
+            clone.addClass('clone');
 
-           // jquery is odd here, but the animation looks cool so I'll leave it.
-           var counter = count * 75;
-            message.queue("yay", function(next) {
-                clone.stop().queue("inner", function(inner) {
-                    $(this).delay(counter, "yay")
-                    .animate({ top:'10px', left: '10px' }, counter);
-                    
-                    $(this).delay(counter+1, "yay")
-                    .css({ 
-                        top: '10px',
-                        left: '10px',
-                        position: 'relative', 
-                        float: 'left', 
-                        display:'block'})
-                    .addClass('clone done');
-
-                    inner();
-                });
-                clone.dequeue("inner");
-                next();
-            });
-            count++;
         });
         $('#content').append(message);
-        message.dequeue("yay"); 
-        $('.content-inner').stop().fadeOut(400);       
-        // Now, queue animations up to a slide-togggle type of animation.
+        $('.content-inner').stop().fadeOut(800, function() {
+            var count = 1,
+                offset = $('#content').offset();
+
+            $('.clone').each(function(a,b) {
+                var c = count,
+                    clone = $(b),
+                    counter = c * 75;
+
+                clone.stop().animate({ 
+                    top: offset.top, 
+                    left: offset.left,
+                    opacity: 0
+                }, 700, 'easeInOutBack', function() { 
+                    $(this).addClass('done');
+                    $(this).css({
+                        top:'',
+                        left:'',
+                        display:'inline',
+                        position:'relative',
+                        float:'left'
+                    });
+                    $(this).delay(counter).animate({ opacity: 1 });
+                });
+            });
+        });       
     });
-    $('header').mouseleave(function() {
+    $('#header').mouseleave(function() {
+        $('.subliminal').remove();
         $('.content-inner').fadeIn('fast', function() { 
-           $('.subliminal').remove();
-           $('.content-inner').show();
-        })
+            $('.content-inner').show();
+        });
     });
 });

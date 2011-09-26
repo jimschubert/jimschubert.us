@@ -41,7 +41,7 @@ canvas#canvas {
   width:100%;
 }
 
-header, footer, #content { z-index: 200; }
+#header, #footer, #content { z-index: 200; }
 
 #intro {
   font-family: 'Black Ops One', sans-serif;
@@ -72,8 +72,8 @@ header, footer, #content { z-index: 200; }
 .pro { font-size: 1.2em; font-weight:700;}
 .expert-ish { font-size: 1.5em; font-weight:900;}
 
-header { margin-bottom: 0.3em; }
-footer { margin-top:0.3em; }
+#header { margin-bottom: 0.3em; }
+#footer { margin-top:0.3em; }
 
 .clone.done { 
 font-size: 1.5em;
