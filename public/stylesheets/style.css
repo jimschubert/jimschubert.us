@@ -46,6 +46,8 @@ canvas#canvas {
   width:100%;
 }
 
+.draw-hint { display: none; }
+
 #header, #footer, #content { z-index: 200; }
 
 #intro {

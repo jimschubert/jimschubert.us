@@ -1,4 +1,13 @@
 $(function() {
+    var canvasTest = document.createElement('canvas');
+    if(canvasTest != null && typeof canvasTest.getContext === "function") {
+        // drawing is allow, load draw.js
+
+        $.getScript('/javascripts/draw.js', function() {
+            $('.draw-hint').show();
+        });
+    }
+    
     $('#header').mouseenter(function(e){
         $('.subliminal').remove();
         $('.content-inner').stop().show().css({opacity:'1.0'});
