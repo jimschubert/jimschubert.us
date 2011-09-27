@@ -42,4 +42,9 @@ $(function() {
     $(window).bind("mousedown", function(e) {
         canvasElem.onmousedown.call(this, e.originalEvent);
     });
+
+    $(window).bind("resize", function() {
+        $('#canvas').width( $(document).width() );
+        $('#canvas').height( $(document).height() );
+    });
 });
