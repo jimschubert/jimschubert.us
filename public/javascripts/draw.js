@@ -1,31 +1,45 @@
 $(function() {
-    var canvas = $('#canvas');
+    var canvas = $('#canvas'),
+        canvasElem = $(canvas).get(0);
     var context = canvas.get(0).getContext('2d');
-    var brush = new Brushes.marker({
-        context: context
+    
+    context.scale(0,0);
+
+    context.canvas.width = $(document).width();
+    context.canvas.height = $(document).height();
+
+    var brush = new Brushes.boxes({
+        context: context,
+        randomize: true,
+        size: 12,
+        pressure: 1
     });
 
-    $(window).mousedown(function(evt) {
-        evt = evt || window.event;
-        if (brush) {
-            console.log(evt);
-            brush.strokeStart(evt.clientX - evt.screenX, evt.clientY - evt.screenY);
+    canvasElem.onmousemove = function(e) {
+        if(canvas.drawing) {
+            brush.stroke(e.pageX, e.pageY);
         }
+    };
+
+    canvasElem.onmousedown = function(e) {
+        canvas.drawing = true;
+        brush.strokeStart(e.pageX, e.pageY);
+    };
+
+    canvasElem.onmouseup = function(e) {
+        canvas.drawing = false;
+        brush.strokeEnd();
+    };
+
+    $(window).bind("mousemove", function(e) {
+        canvasElem.onmousemove.call(this, e.originalEvent);
     });
 
-    $(window).mouseup(function(evt) {
-        canvas.onmousemove = null;
+    $(window).bind("mouseup", function(e) {
+        canvasElem.onmouseup.call(this, e.originalEvent);
     });
 
-    $(window).mousemove(function(evt) {
-        evt = evt || window.event;
-        var w = document.embeds["wacom-plugin"],
-            pressure = w&&w.pressure?w.pressure:1.0,
-            isEraser = w&&w.isEraser,
-            brushSize = 1.0; // TODO
-            if(brush) { 
-                brush.BRUSH_SIZE = brushSize;
-                brush.stroke(evt.clientX - evt.screenX, evt.clientY - evt.screenY);
-            }
+    $(window).bind("mousedown", function(e) {
+        canvasElem.onmousedown.call(this, e.originalEvent);
     });
 });
