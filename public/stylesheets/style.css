@@ -109,3 +109,23 @@ font-weight: 800;
   content: ".\0000a0";
 }
 
+@media print {
+body {
+font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+font-weight: normal;
+color: black;
+color: rgba(0,0,0,1);
+height:auto;
+width:auto;
+}
+
+em.draw-hint { display: none !important; }
+#canvas { display: none; height:0; width:0; }
+
+#intro, h1, h2, h3, h4, h5 { 
+font-family: 'Arial', sans-serif;;
+text-shadow: 0 0 0 #bbb;
+}
+
+#knol h2 { border-bottom: 1px dotted black; }
+}
