@@ -44,7 +44,8 @@ $(function() {
     });
 
     $(window).bind("resize", function() {
-        $('#canvas').width( $(document).width() );
-        $('#canvas').height( $(document).height() );
+        var canvas = $('#canvas').get(0);
+        canvas.width = $(document).width();
+        canvas.height = $(document).height();
     });
 });
