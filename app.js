@@ -34,5 +34,9 @@ app.get('/', function(req, res){
   });
 });
 
+app.get('/googlecb8256201e414498.html', function(req, res) {
+    res.send('google-site-verification: googlecb8256201e414498.html');
+});
+
 app.listen(process.env.PORT || 3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
