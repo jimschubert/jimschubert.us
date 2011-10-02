@@ -1,4 +1,6 @@
 $(function() {
+    $('.fake-noscript').remove();
+
     var canvasTest = document.createElement('canvas');
     if(canvasTest != null && typeof canvasTest.getContext === "function") {
         // drawing is allow, load draw.js
