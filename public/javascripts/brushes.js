@@ -1,4 +1,8 @@
 /*
+project: brushes.js
+author: Jim Schubert
+url: https://github.com/jimschubert/brushes.js
+
 The MIT License
 
 Copyright (c) 2011 Jim Schubert
@@ -34,7 +38,7 @@ THE SOFTWARE.
 		DEBUG: DEBUG_BRUSH,
 		_debug: function (msg) {
 			if (this.DEBUG) {
-			    console.log(msg);
+			    console && typeof console.log === 'function' && console.log(msg);
 			}
 		},
 		className: "Brush",
@@ -58,7 +62,6 @@ THE SOFTWARE.
 		points: new Array(),
 		count: 0,
 		_strokeStyle: function (data) {
-			this._mergeOptions(data || { });
 			var opt = this.options;
 			
 			var r = opt.color[0];
@@ -75,10 +78,8 @@ THE SOFTWARE.
 			return normal;
 		},
 		init: function (data) {
-			if (data && data.context) {
-			    this.reset(this.data);
-				this._mergeOptions(data);
-			} else {
+
+            if(!data || !data.context) {
 			    var $tag = this.window && this.window.document && this.window.document.getElementsByTagName;
 			    if ($tag) {
 			        var canvas = $tag('canvas') ? $tag('canvas')[0] : null;
@@ -86,14 +87,18 @@ THE SOFTWARE.
 			            this.context = canvas.getContext("2d");
 			        }
 			    }
-			}
-			if ("function" === typeof this._init) {
-			    this._init(data);
-			}
+            }
+
+            this._mergeOptions(data);
+            this.reset(data);
+           
+            if(typeof this._init === "function")
+                this._init(data);
 		},
 		reset: function (data) {
 			if (data || this.options) {
-			    this.context = data.context || this.context.canvas.getContext('2d');
+                data = data || { };
+			    this.context = data.context || this.context;
 			    this.options.size = data.size || this.defaults.BRUSH_SIZE;
 			    this.options.pressure = data.pressure || this.defaults.BRUSH_PRESSURE;
 			    this.options.color = data.color || this.defaults.COLOR;
@@ -105,7 +110,6 @@ THE SOFTWARE.
 			    this.count = 0;
 			}
 			this._setContextDefaults();
-			this._init();
 		},
 		destroy: function () {	},
 		strokeEnd: function () {
@@ -117,6 +121,9 @@ THE SOFTWARE.
 		},
 		stroke: function (newX, newY) {
 			var context = this.context;
+            var options = this.options;
+            context.lineWidth = options.size;
+
 			context.beginPath();
 			context.moveTo(this.prevMouseX, this.prevMouseY);
 			context.lineTo(newX, newY);
@@ -130,11 +137,12 @@ THE SOFTWARE.
 			return Math.sqrt((x -= x0) * x + (y -= y0) * y);
 		},
 		_setContextDefaults: function () {
+            if(!this.context) return;
 			var style = this._strokeStyle();
 			this.context.fillStyle = style;
 			this.context.font = "10px sans-serif";
 			this.context.globalAlpha = 1;
-			this.context.globalCompositeOperation = "darker";
+			this.context.globalCompositeOperation = "source-over";
 			this.context.lineCap = "square";
 			this.context.lineJoin = "miter";
 			this.context.lineWidth = this.defaults.BRUSH_SIZE * this.defaults.BRUSH_PRESSURE;
@@ -165,12 +173,11 @@ THE SOFTWARE.
 			return this.points;
 		},
 		_mergeOptions: function(data){
+            var self = this;
 			if("object" == typeof data)
-				for (p in data) { this.options[p] = data[p]; }
+				for (p in data) { self.options[p] = data[p]; }
 		}
 	};
-	
-    var _brush = Brush;
 
     /***************************************************************
      * Brushes.pencil
@@ -187,10 +194,9 @@ THE SOFTWARE.
             self.className = "pencil";
             data = data || {};
             data.weight = 0.5;
-            self.context = data.context;
-			self._mergeOptions(data);
+            self.init(data);
         };
-    _pencil.prototype = new _brush;
+    _pencil.prototype.__proto__ = Brush.prototype;
     _pencil.prototype._init = function (data) {
     	var self = this;
         if (self.context) {
@@ -212,13 +218,12 @@ THE SOFTWARE.
 			 * @type {string}
 			 */
             self.className = "pen";
-            self.data = data || {};
-            self.data.weight = 3.0;
-            self.context = data.context;
-			self._mergeOptions(data);
+            data = data || {};
+            data.weight = 3.0;
+            self.init(data);
         };
 
-    _pen.prototype = new _brush;
+    _pen.prototype.__proto__ = Brush.prototype;
     _pen.prototype._init = function (data) {
     	var self = this;
         if (self.context) {
@@ -240,12 +245,11 @@ THE SOFTWARE.
 			 * @type {string}
 			 */
             self.className = "marker";
-            self.data = data || {};
-            self.data.weight = 5.0;
-            self.context = data.context;
-			self._mergeOptions(data);
+            data = data || {};
+            data.weight = 5.0;
+            self.init(data);
         };
-    _marker.prototype = new _brush;
+    _marker.prototype.__proto__ = Brush.prototype;
     _marker.prototype._init = function (data) {
     	var self = this;
         if (self.context) {
@@ -267,32 +271,33 @@ THE SOFTWARE.
 		 * @type {string}
 		 */
         self.className = "charcoal";
-        self.data = data || {};
-        self.data.weight = 5.0;
-        self.context = data.context;
-			self._mergeOptions(data);
+        data = data || {};
+        data.weight = 0.09;
+        self.init(data);
     };
-    _charcoal.prototype = new _brush;
+    _charcoal.prototype.__proto__ = Brush.prototype;
     _charcoal.prototype._init = function (data) {
     	var self = this;
     	var ctx = self.context;
         if (ctx && ctx.globalCompositeOperation) {
             ctx.globalCompositeOperation = "darker";
         }
+        if(ctx) {
+            self.context.strokeStyle = self._strokeStyle({
+                weight: self.options.weight
+            });
+            ctx.lineCap = "butt";
+            ctx.lineJoin = "bevel";
+        }
     };
     _charcoal.prototype.stroke = function (g, c) {
     	var self = this;
 		var ctx = self.context;
 		ctx.lineWidth = self.options.size;
-		ctx.strokeStyle = self._strokeStyle({
-            weight: 0.05
-        });
         self.points.push([g, c]); /* add current point */
         var scratchPressure = Math.random() % 80;
         for (var i = (scratchPressure / 2) * 7; i >= 0; i--) {
             ctx.beginPath();
-            ctx.lineCap = "butt";
-            ctx.lineJoin = "bevel";
             ctx.moveTo(g + i, c - i);
             ctx.lineWidth = self.options.size * i;
             ctx.lineTo(g, c + (self.options.pressure * i));
@@ -315,36 +320,34 @@ THE SOFTWARE.
 			 */
             self.className = "stars";
             data = data || {};
-            data.weight = 5.0;
-            self.context = data.context;
-			self._mergeOptions(data);
+            data.weight = 0.9;
+            self.init(data);
         };
-    _stars.prototype = new _brush;
+    _stars.prototype.__proto__ = Brush.prototype;
     _stars.prototype._init = function (data) {
     	var self = this;
     	var ctx = self.context;
         if (ctx && ctx.globalCompositeOperation) {
-            ctx.globalCompositeOperation = "source-out";
-            console.log("stars._init");
+            ctx.globalCompositeOperation = "source-over";
         }
 
-        ctx.lineCap = "square";
-        ctx.lineJoin = "miter";
+        if(ctx) {
+            ctx.lineCap = "square";
+            ctx.lineJoin = "miter";
+            self.context.lineWidth = self.options.size;
+            self.context.strokeStyle = self._strokeStyle({
+                weight: self.options.weight
+            });
+            self.context.fillStyle = self._strokeStyle({
+                randomize: self.options.randomize
+            });
+        }
     };
     _stars.prototype.stroke = function (g, c) {
     	var self = this;
-        self.context.lineWidth = self.options.size;
-        self.context.strokeStyle = self._strokeStyle({
-            weight: self.options.weight
-        });
-
         if (self.pointDistance(g, c, self.prevMouseX, self.prevMouseY) < self.options.size * 1.3) {
             return;
         }
-        self.context.fillStyle = self._strokeStyle({
-            randomize: self.options.randomize
-        });
-
         var control = Math.PI / 3;
         var radians = Math.cos(control) * g + Math.sin(control) * c;
 
@@ -392,25 +395,29 @@ THE SOFTWARE.
             self.className = "boxes";
             data = data || {};
             data.weight = 0.5;
-            self.context = data.context;
-			self._mergeOptions(data);
+            self.init(data);
         };
-    _boxes.prototype = new _brush;
+    _boxes.prototype.__proto__ = Brush.prototype;
     _boxes.prototype._init = function (data) {
     	var self = this;
         if (self.context && self.context.globalCompositeOperation) {
             self.context.globalCompositeOperation = "source-over";
         }
 
-        self.context.lineCap = "square";
-        self.context.lineJoin = "miter";
+        if(self.context) {
+            self.context.lineCap = "square";
+            self.context.lineJoin = "miter";
+            self.context.lineWidth = 2.0; /* BRUSH_SIZE will determine size of box */
+            self.context.strokeStyle = self._strokeStyle({
+                weight: self.options.weight
+            });
+            self.context.fillStyle = self._strokeStyle({
+                randomize: self.options.randomize
+            });
+        }
     };
     _boxes.prototype.stroke = function (x, y) {
     	var self = this;
-        self.context.lineWidth = 2.0; /* BRUSH_SIZE will determine size of box */
-        self.context.strokeStyle = self._strokeStyle({
-            weight: self.options.weight
-        });
         if (self.pointDistance(x, y, self.prevMouseX, self.prevMouseY) < self.options.size * 1.5) {
             return;
         }
@@ -420,10 +427,7 @@ THE SOFTWARE.
 
         var control = Math.PI / 3;
         var radians = Math.cos(control) * x + Math.sin(control) * y;
-        self.context.fillStyle = self._strokeStyle({
-            randomize: self.options.randomize
-        });
-
+               
         self.context.save();
 
         var baseX = 3 + self.options.size * self.options.pressure;
@@ -462,21 +466,25 @@ THE SOFTWARE.
             self.className = "hearts";
             data = data || {};
             data.weight = 0.5;
-            self.context = data.context;
-			self._mergeOptions(data);
+            self.init(data);
         };
-    _hearts.prototype = new Brush;
+    _hearts.prototype.__proto__ = Brush.prototype;
     _hearts.prototype._init = function (data) {
     	var self = this;
-        self.context.lineCap = "round";
-        self.context.lineJoin = "round";
+        if(self.context) {
+            self.context.lineCap = "round";
+            self.context.lineJoin = "round";
+            self.context.strokeStyle = self._strokeStyle({
+                weight: self.options.weight
+            });
+            self.context.fillStyle = self._strokeStyle({
+                randomize: self.options.randomize
+            });
+            self.context.lineWidth = 2.0;
+        }
     };
     _hearts.prototype.stroke = function (x, y) {
     	var self = this;
-        self.context.lineWidth = 2.0; /* BRUSH_SIZE will determine size of hearts */
-        self.context.strokeStyle = self._strokeStyle({
-            weight: self.options.weight
-        });
 
         if (self.pointDistance(x, y, self.prevMouseX, self.prevMouseY) < self.options.size * 1.5) {
             return;
@@ -486,9 +494,6 @@ THE SOFTWARE.
         self.count++;
 
         var radians = 45;
-        self.context.fillStyle = self._strokeStyle({
-            randomize: self.options.randomize
-        });
 
         self.context.save();
 
@@ -526,17 +531,18 @@ THE SOFTWARE.
             self.className = "blood";
             data = data || {};
             data.weight = 1.5;
-            self.context = data.context;
-			self._mergeOptions(data);
+            self.init(data);
         };
-    _blood.prototype = new Brush;
+    _blood.prototype.__proto__ = Brush.prototype;
     _blood.prototype._init = function (data) {
     	var self = this;
         if (self.context && self.context.globalCompositeOperation) {
             self.context.globalCompositeOperation = "darker";
         }
-        self.context.lineCap = "round";
-        self.context.lineJoin = "bevel";
+        if(self.context) {
+            self.context.lineCap = "round";
+            self.context.lineJoin = "bevel";
+        }        
     };
     _blood.prototype.stroke = function (x, y) {
     	var self = this;
@@ -588,11 +594,11 @@ THE SOFTWARE.
     _brushes['boxes'] = _boxes;
     _brushes['hearts'] = _hearts;
     _brushes['blood'] = _blood;
-    _brushes['Brush'] = _brush;
+    _brushes['Brush'] = Brush;
         
 	if ("object" === typeof module && "object" === typeof module.exports) {
 		module.exports.Brushes = _brushes;
-		module.exports.Brush = _brush;
+		module.exports.Brush = Brush;
 	}
 	
 	Brushes = _brushes;

@@ -1,3 +1,4 @@
+window['jimschubert.us brush'] = "";
 $(function() {
     var canvas = $('#canvas'),
         canvasElem = $(canvas).get(0);
@@ -23,6 +24,7 @@ $(function() {
 
     canvasElem.onmousedown = function(e) {
         canvas.drawing = true;
+        brush = window['jimschubert.us brush'] || brush;
         brush.strokeStart(e.pageX, e.pageY);
     };
 

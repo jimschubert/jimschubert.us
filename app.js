@@ -34,6 +34,12 @@ app.get('/', function(req, res){
   });
 });
 
+app.get('/about', function(req, res) {
+  res.render('about', {
+    title: 'About (jimschubert.us)'
+  });
+});
+
 app.get('/googlecb8256201e414498.html', function(req, res) {
     res.send('google-site-verification: googlecb8256201e414498.html');
 });
