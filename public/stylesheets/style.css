@@ -58,7 +58,7 @@ canvas#canvas {
   text-decoration: none;
 }
 
-#content {
+#content, #footer {
   background-color: rgba(255,255,255,0.9);
   padding:0.3em 0.4em;
   border-radius:4px;
