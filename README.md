@@ -4,9 +4,15 @@ jimschubert.us is a personal resume project by Jim Schubert.
 
 Although I don't see a need for anyone to reuse my resume, I'm perfectly happy with anyone modifying it to display their own resume as long as the result is compliant with the [MIT License](bit.ly/mit-license) and any licenses of included source code (e.g. brushes.js).
 
-*TODO*
+Steps for publishing this code to heroku (taken from [here](https://devcenter.heroku.com/articles/nodejs)):
 
-Insert steps for publishing this code to Heroku here.
+ * Install [heroku toolbelt](https://toolbelt.herokuapp.com/)
+ * Execute `cd /your/repo`
+ * Execute `heroku login` in a terminal
+ * Execute `heroku create --stack cedar`
+ * Execute `git push heroku master`
+
+Follow the instructions on heroku's site for more information about setting environment variables and creating worker processes or setting the application executable.
 
 # MIT License
 Copyright (c) 2011-2012 Jim Schubert
