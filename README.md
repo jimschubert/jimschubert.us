@@ -1,6 +1,6 @@
 # Project
 
-jimschubert.us is a personal resume project by Jim Schubert.
+[jimschubert.us](http://jimschubert.us) is a personal resume project by Jim Schubert.
 
 Although I don't see a need for anyone to reuse my resume, I'm perfectly happy with anyone modifying it to display their own resume as long as the result is compliant with the [MIT License](bit.ly/mit-license) and any licenses of included source code (e.g. brushes.js).
 
