@@ -1,11 +1,15 @@
 {
-    "name": "jimschubert.us"
-  , "version": "0.0.1"
-  , "private": true
-  , "dependencies": {
-      "express": "2.4.6"
-    , "ejs": ">=0.4.3"
-    , "nodeunit": ">=0.5.5"
-    , "uglify-js": ">=1.1.0"
-  }
+    "name": "jimschubert.us",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "express": "2.4.6",
+        "ejs": ">=0.4.3",
+        "nodeunit": ">=0.5.5",
+        "uglify-js": ">=1.1.0"
+    },
+    "engines": {
+        "node": ">=0.8.18",
+        "npm": ">=1.2.0"
+    }
 }
