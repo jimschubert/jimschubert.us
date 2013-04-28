@@ -1,4 +1,4 @@
-
+"use strict";
 /**
  * Module dependencies.
  */
@@ -9,38 +9,38 @@ var app = module.exports = express.createServer();
 
 // Configuration
 
-app.configure(function(){
-  app.set('views', __dirname + '/views');
-  app.set('view engine', 'ejs');
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(app.router);
-  app.use(express.static(__dirname + '/public'));
+app.configure(function () {
+    app.set('views', __dirname + '/views');
+    app.set('view engine', 'ejs');
+    app.use(express.bodyParser());
+    app.use(express.methodOverride());
+    app.use(app.router);
+    app.use(express.static(__dirname + '/public'));
 });
 
-app.configure('development', function(){
-  app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
+app.configure('development', function () {
+    app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
-app.configure('production', function(){
-  app.use(express.errorHandler()); 
+app.configure('production', function () {
+    app.use(express.errorHandler());
 });
 
 // Routes
 
-app.get('/', function(req, res){
-  res.render('index', {
-    title: 'James Schubert (jimschubert.us)'
-  });
+app.get('/', function (req, res) {
+    res.render('index', {
+        title: 'James Schubert (jimschubert.us)'
+    });
 });
 
-app.get('/about', function(req, res) {
-  res.render('about', {
-    title: 'About (jimschubert.us)'
-  });
+app.get('/about', function (req, res) {
+    res.render('about', {
+        title: 'About (jimschubert.us)'
+    });
 });
 
-app.get('/googlecb8256201e414498.html', function(req, res) {
+app.get('/googlecb8256201e414498.html', function (req, res) {
     res.send('google-site-verification: googlecb8256201e414498.html');
 });
 
