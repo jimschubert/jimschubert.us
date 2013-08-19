@@ -1,3 +1,89 @@
+<div class="grid_8">
 <h1>About</h1>
+<small>
+<em>I thought I should have a little explanation of the site. Here it is.</em>
+</small>
+<h2 style="margin:0.3em 0 0.2em 0;">Fun</h2>
+<p style="margin:0 0 0.4em 0;">
+I created this online resume one weekend because I felt that other 
+venues didn't properly display my sense of humor. I showed this site
+to my friend Will shortly afterward and he thought it was odd that an 
+HTML5-enabled browser would allow the viewer to draw on the background.
+</p>
+<p style="margin:0 0 0.4em 0;">
+If you've drawn on the background, I've tricked you into liking my resume.
+I also hope you laughed at the hidden message. I did. I think happy and 
+creative Software Engineers are the best.
+</p>
 
-About!
+<h2 style="margin:0.3em 0 0.2em 0;">Serious</h2>
+<p style="margin:0 0 0.4em 0;">
+The source code for this site is available under the 
+<a href="http://bit.ly/mit-license target="_blank">MIT License</a> on 
+<a href="http://github.com/jimschubert/jimschubert.us" target="_blank">github/jimschubert</a>. 
+If you use the resume, please change the experience and background!
+</p>
+<p style="margin:0 0 0.2em 0;">
+The background drawing uses <a href="http://github.com/jimschubert/brushes.js" target="_blank">brushes.js</a>,
+a project I worked on shortly to familiarize myself with HTML5 canvas and the 2d context.
+
+If you would like to try some of the other brushes, click a brush name below to reset:
+<ul>
+    <li><a href="#" class="brush">blood</a></li>
+    <li><a href="#" class="brush">boxes</a></li>
+    <li><a href="#" class="brush">charcoal</a></li>
+    <li><a href="#" class="brush">hearts</a></li>
+    <li><a href="#" class="brush">marker</a></li>
+    <li><a href="#" class="brush">pen</a></li>
+    <li><a href="#" class="brush">stars</a></li>
+</ul>
+<script type="text/javascript">
+$(function() {
+    $('a.brush').click(function(e) {
+        var name = $(this).text();
+        window['jimschubert.us brush'] = new Brushes[name]({
+            context: ($('#canvas').get(0).getContext('2d')),
+            size: 12,
+            pressure: 1
+        });
+        return false;
+    });
+});
+</script>
+</p>
+</div>
+<div class="grid_3 prefix_1">
+<h1>Other Projects</h1>
+<dl>
+    <dt>
+        <a href="https://github.com/jimschubert/NewTab-Redirect" target="_blank">New Tab Redirect!</a>
+    </dt>
+    <dd>
+        <small>An extension for Google Chrome which replaces the default New Tab page with a user-specified URL.</small>
+    </dd>
+    <dt>
+        <a href="https://github.com/jimschubert/masteringnode" target="_blank">Mastering Node</a>
+    </dt>
+    <dd>
+        <small>My fork of <em>Mastering Node</em>, an open source ebook about node.js</small>
+    </dd>
+    <dt>
+        <a href="https://github.com/jimschubert/jquery.empuzzle" target="_blank">jquery.empuzzle</a>
+    </dt>
+    <dd>
+        <small>A familiar game with no familiar name. An image is sliced and added to tiles which need to be rearranged.</small>
+    </dd>
+    <dt>
+        <a href="https://github.com/jimschubert/tweeter.js" target="_blank">tweeter.js</a>
+    </dt>
+    <dd>
+        <small>A simple node.js wrapper for the Twitter API v1, which allows you to authenticate and execute service calls.</small>
+    </dd>
+    <dt>
+        <a href="https://github.com/jimschubert/quaketracker" target="_blank">Quake Tracker</a>
+    </dt>
+    <dd>
+        <small>A Google Maps v3 mashup that displays earthquakes via RSS feeds from the USGS Earthquake center</small>
+    </dd>
+</dl>
+</div>

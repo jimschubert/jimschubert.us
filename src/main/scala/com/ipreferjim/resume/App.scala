@@ -3,25 +3,16 @@ package com.ipreferjim.resume
 import com.twitter.finatra._
 import com.twitter.finatra.ContentType._
 import com.twitter.ostrich.stats.Stats
-import scala.tools.nsc.io.File
+import scala.tools.nsc.io.{Path, File}
 
 object App {
 
-  class ExampleApp extends Controller {
-
-    class IndexView extends View {
-      val template = "index.mustache"
-    }
-
-    class AboutView extends View {
-      val template = "about.mustache"
-    }
+  class ExampleApp extends Controller with ResumeViews {
 
     get("/") { request =>
       Stats.incr("index")
       Stats.timeFutureMicros("index time") {
-        val index = new IndexView
-        render.view(index).toFuture
+        render.view(Page(IndexView())).toFuture
       }
     }
 
@@ -36,8 +27,7 @@ object App {
     get("/about") { request =>
       Stats.incr("about")
       Stats.timeFutureMicros("about time") {
-        val about = new AboutView
-        render.view(about).toFuture
+        render.view(Page(AboutView())).toFuture
       }
     }
 
@@ -48,21 +38,28 @@ object App {
     get("/js/:filename") { request =>
       Stats.incr("javascripts")
       Stats.timeFutureMicros("javascripts time") {
-        serveOrFailStaticFile(request, "js")
+        serveOrFailStaticFile(request, "javascripts")
       }
     }
 
     get("/css/:filename") { request =>
-      Stats.incr("css")
+      Stats.incr("stylesheets")
       Stats.timeFutureMicros("css time") {
-        serveOrFailStaticFile(request, "css")
+        serveOrFailStaticFile(request, "stylesheets")
       }
     }
 
     def serveOrFailStaticFile(request:Request, path:String) = {
       request.routeParams.get("filename") match {
-        case Some(filename:String) if File("""/css/$filename""").exists  => render.static("""/css/$filename""").toFuture
-        case _ => render.status(404).plain("").toFuture
+        case Some(filename:String) =>
+          val full = path + File.separator + filename
+          if(FileResolver.hasFile(full)) {
+            render.static(full).toFuture
+          } else {
+            render.status(404).plain("").toFuture
+          }
+        case _ =>
+          render.status(404).plain("").toFuture
       }
     }
 
