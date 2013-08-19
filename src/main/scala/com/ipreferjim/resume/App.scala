@@ -3,115 +3,67 @@ package com.ipreferjim.resume
 import com.twitter.finatra._
 import com.twitter.finatra.ContentType._
 import com.twitter.ostrich.stats.Stats
+import scala.tools.nsc.io.File
 
 object App {
 
-  
   class ExampleApp extends Controller {
 
-    /**
-     * Basic Example
-     *
-     * curl http://localhost:7070/ => "hello world"
-     */
+    class IndexView extends View {
+      val template = "index.mustache"
+    }
+
+    class AboutView extends View {
+      val template = "about.mustache"
+    }
+
     get("/") { request =>
-      render.plain("hello world").toFuture
-    }
-
-    delete("/photos") { request =>
-      render.plain("deleted!").toFuture
-    }
-
-    /**
-     * Route parameters
-     *
-     * curl http://localhost:7070/user/dave => "hello dave"
-     */
-    get("/user/:username") { request =>
-      val username = request.routeParams.getOrElse("username", "default_user")
-      render.plain("hello " + username).toFuture
-    }
-
-    /**
-     * Setting Headers
-     *
-     * curl -I http://localhost:7070/headers => "Foo:Bar"
-     */
-    get("/headers") { request =>
-      render.plain("look at headers").header("Foo", "Bar").toFuture
-    }
-
-    /**
-     * Rendering json
-     *
-     * curl -I http://localhost:7070/headers => "Foo:Bar"
-     */
-    get("/data.json") { request =>
-      render.json(Map("foo" -> "bar")).toFuture
-    }
-
-    /**
-     * Query params
-     *
-     * curl http://localhost:7070/search?q=foo => "no results for foo"
-     */
-    get("/search") { request =>
-      request.params.get("q") match {
-        case Some(q) => render.plain("no results for "+ q).toFuture
-        case None    => render.plain("query param q needed").status(500).toFuture
+      Stats.incr("index")
+      Stats.timeFutureMicros("index time") {
+        val index = new IndexView
+        render.view(index).toFuture
       }
     }
 
-    /**
-     * Redirects
-     *
-     * curl http://localhost:7070/redirect
-     */
-    get("/redirect") { request =>
-      redirect("http://localhost:7070/", permanent = true).toFuture
+    get("/index") { request =>
+      route.get("/")
     }
 
-    /**
-     * Uploading files
-     *
-     * curl -F avatar=@/path/to/img http://localhost:7070/profile
-     */
-    post("/profile") { request =>
-      request.multiParams.get("avatar").map { avatar =>
-        println("content type is " + avatar.contentType)
-        avatar.writeToFile("/tmp/avatar") //writes uploaded avatar to /tmp/avatar
+    get("/index.:format") { request =>
+      route.get("/")
+    }
+
+    get("/about") { request =>
+      Stats.incr("about")
+      Stats.timeFutureMicros("about time") {
+        val about = new AboutView
+        render.view(about).toFuture
       }
-      render.plain("ok").toFuture
     }
 
-    options("/some/resource") { request =>
-      render.plain("usage description").toFuture
+    get("/deal.gif") { request =>
+      render.static("/dealwithit.gif").toFuture
     }
 
-    /**
-     * Rendering views
-     *
-     * curl http://localhost:7070/posts
-     */
-    class AnView extends View {
-      val template = "an_view.mustache"
-      val some_val = "random value here"
+    get("/js/:filename") { request =>
+      Stats.incr("javascripts")
+      Stats.timeFutureMicros("javascripts time") {
+        serveOrFailStaticFile(request, "js")
+      }
     }
 
-    get("/template") { request =>
-      val anView = new AnView
-      render.view(anView).toFuture
+    get("/css/:filename") { request =>
+      Stats.incr("css")
+      Stats.timeFutureMicros("css time") {
+        serveOrFailStaticFile(request, "css")
+      }
     }
 
-
-    /**
-     * Custom Error Handling
-     *
-     * curl http://localhost:7070/error
-     */
-    get("/error")   { request =>
-      1234/0
-      render.plain("we never make it here").toFuture
+    def serveOrFailStaticFile(request:Request, path:String) = {
+      request.routeParams.get("filename") match {
+        case Some(filename:String) if File("""/css/$filename""").exists  => render.static("""/css/$filename""").toFuture
+        case _ => render.status(404).plain("").toFuture
+      }
     }
 
     /**
@@ -128,7 +80,7 @@ object App {
     error { request =>
       request.error match {
         case Some(e:ArithmeticException) =>
-          render.status(500).plain("whoops, divide by zero!").toFuture
+          render.status(500).plain("whoops!").toFuture
         case Some(e:Unauthorized) =>
           render.status(401).plain("Not Authorized!").toFuture
         case Some(e:UnsupportedMediaType) =>
@@ -138,86 +90,14 @@ object App {
       }
     }
 
-
     /**
      * Custom 404s
      *
      * curl http://localhost:7070/notfound
      */
     notFound { request =>
-      render.status(404).plain("not found yo").toFuture
+      render.status(404).plain("not found").toFuture
     }
-
-    /**
-     * Arbitrary Dispatch
-     *
-     * curl http://localhost:7070/go_home
-     */
-    get("/go_home") { request =>
-      route.get("/")
-    }
-
-    get("/search_for_dogs") { request =>
-      route.get("/search", Map("q" -> "dogs"))
-    }
-
-    get("/delete_photos") { request =>
-      route.delete("/photos")
-    }
-
-    get("/gif") { request =>
-      render.static("/dealwithit.gif").toFuture
-    }
-
-    /**
-     * Dispatch based on Content-Type
-     *
-     * curl http://localhost:7070/index.json
-     * curl http://localhost:7070/index.html
-     */
-    get("/blog/index.:format") { request =>
-      respondTo(request) {
-        case _:Html => render.html("<h1>Hello</h1>").toFuture
-        case _:Json => render.json(Map("value" -> "hello")).toFuture
-      }
-    }
-
-    /**
-     * Also works without :format route using browser Accept header
-     *
-     * curl -H "Accept: text/html" http://localhost:7070/another/page
-     * curl -H "Accept: application/json" http://localhost:7070/another/page
-     * curl -H "Accept: foo/bar" http://localhost:7070/another/page
-     */
-
-    get("/another/page") { request =>
-      respondTo(request) {
-        case _:Html => render.plain("an html response").toFuture
-        case _:Json => render.plain("an json response").toFuture
-        case _:All => render.plain("default fallback response").toFuture
-      }
-    }
-
-    /**
-     * Metrics are supported out of the box via Twitter's Ostrich library.
-     * More details here: https://github.com/twitter/ostrich
-     *
-     * curl http://localhost:7070/slow_thing
-     *
-     * By default a stats server is started on 9990:
-     *
-     * curl http://localhost:9990/stats.txt
-     *
-     */
-
-    get("/slow_thing") { request =>
-      Stats.incr("slow_thing")
-      Stats.time("slow_thing time") {
-        Thread.sleep(100)
-      }
-      render.plain("slow").toFuture
-    }
-
   }
 
   val app = new ExampleApp
