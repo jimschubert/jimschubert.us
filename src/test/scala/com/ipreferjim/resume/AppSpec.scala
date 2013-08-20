@@ -7,7 +7,7 @@ import com.ipreferjim.resume._
 
 class AppSpec extends SpecHelper {
 
-  val app = new App.ExampleApp
+  val app = new Main.ResumeApp
 
   "GET /unauthorized" should "respond 401" in {
     get("/unauthorized")
