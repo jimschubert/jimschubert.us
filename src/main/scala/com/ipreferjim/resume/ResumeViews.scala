@@ -5,9 +5,10 @@ import com.twitter.finatra.View
 trait ResumeViews {
 
   object Page {
-    def apply(dep: => View) = { new Page(dep) }
+    def apply(dep: => View, title:String = "Jim Schubert") = { new Page(dep) { title = title } }
   }
   class Page(dep: => View) extends View {
+    var title = "Jim Schubert"
     val template = "layout.mustache"
     contentType   = Some("text/html")
 

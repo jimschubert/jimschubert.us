@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!--[if lt IE 7 ]> <html class="ie ie6 lte9 lte8 lte7 no-js"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 lte9 lte8 lte7 no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 lte9 lte8 no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 lte9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="notie no-js"> <!--<![endif]-->
   <head>
     <title>
       {{title}}
@@ -8,12 +12,35 @@
     <meta name="author" content="Jim Schubert" />
     <meta name="description" content="Resume: Jim Schubert, Software Developer" />
     <meta name="keywords" content="Jim Schubert, resume, Seattle" />
+    <style type="text/css">
+      /**
+       * Antic	SIL Open Font License, 1.1
+       * Antic-Regular.ttf: Copyright (c) 2010, 2011, Santiago Orozco <hi@typemade.mx>, with Reserved Font Name "Antic"
+       */
+      @font-face {
+        font-family: 'Antic';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Antic'), local('Antic-Regular'), url(/fonts/Antic-Regular.woff) format('woff');
+      }
+
+      /**
+       * Black Ops One	SIL Open Font License, 1.1
+       * BlackOpsOne-Regular.ttf: Copyright (c) 2011, Sorkin Type Co (www.sorkintype.com) with Reserved Font Names "Black Ops" and "Black Ops One".
+       */
+      @font-face {
+        font-family: 'Black Ops One';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Black Ops One'), local('BlackOpsOne-Regular'), url(/fonts/BlackOpsOne-Regular.woff) format('woff');
+      }
+    </style>
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/text.css" />
     <link rel="stylesheet" href="/css/960.css" />
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Antic|Black+Ops+One" />
     <link rel="stylesheet" href="/css/style.css" />
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/modernizr.js"></script>
+    <script type="text/javascript" src="/js/jquery.js"></script>
   </head>
  <body>
     <div id="wrapper">
@@ -29,6 +56,11 @@
         </div>
       </div>
       <div id="content" class="container_12">
+      <div class="fake-noscript grid_12">
+        <div class="notice">
+          Please enable JavaScript to view this site properly
+        </div>
+      </div>
         {{body}}
       </div>
       <div id="footer" class="container_12">

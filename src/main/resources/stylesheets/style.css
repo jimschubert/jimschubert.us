@@ -11,6 +11,12 @@ body {
   user-select: none;
 }
 
+html.js div.fake-noscript { display:none; }
+html.no-js div.fake-noscript { display:block; }
+
+html em.draw-hint { display:none; }
+html.canvas em.draw-hint { display:inline; }
+
 .notice {
   background: #FCE9C0 url(/img/alert-icon.png) left no-repeat;
   background-position: 12px;
@@ -20,10 +26,15 @@ body {
 }
 
 a { color: rgba(0,50,220,0.9); }
-a[target="_blank"] { 
-  padding: 0 15px 0 0; 
-  background: url(/img/external.png) no-repeat right center;
+
+a[target="_blank"] {
+  padding: 0 15px 0 0;
   margin: 0px 2px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC)  no-repeat right center;
+}
+
+html.ie7 a[target="_blank"] {
+  background: url(/img/external.png) no-repeat right center;
 }
 
 h1, h2, h3, h4, h5 { 
@@ -123,7 +134,7 @@ em.draw-hint { display: none !important; }
 #canvas { display: none; height:0; width:0; }
 
 #intro, h1, h2, h3, h4, h5 { 
-font-family: 'Arial', sans-serif;;
+font-family: 'Arial', sans-serif;
 text-shadow: 0 0 0 #bbb;
 }
 

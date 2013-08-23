@@ -9,7 +9,7 @@ class ResumeApp extends Controller with ResumeViews {
   get("/") { request =>
     Stats.incr("index")
     Stats.timeFutureMillis("index time") {
-      render.view(Page(IndexView())).toFuture
+      render.view(Page(IndexView(), "Jim Schubert - Developer")).toFuture
     }
   }
 
@@ -24,7 +24,7 @@ class ResumeApp extends Controller with ResumeViews {
   get("/about") { request =>
     Stats.incr("about")
     Stats.timeFutureMillis("about time") {
-      render.view(Page(AboutView())).toFuture
+      render.view(Page(AboutView(), "Jim Schubert - About")).toFuture
     }
   }
 
