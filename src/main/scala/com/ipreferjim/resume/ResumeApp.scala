@@ -1,8 +1,10 @@
 package com.ipreferjim.resume
 
-import com.twitter.finatra.{UnsupportedMediaType, FileResolver, Request, Controller}
+import com.twitter.finatra._
 import com.twitter.ostrich.stats.Stats
 import scala.tools.nsc.io.File
+import com.twitter.util.Future
+import scala.Some
 
 class ResumeApp extends Controller with ResumeViews {
 
@@ -46,12 +48,14 @@ class ResumeApp extends Controller with ResumeViews {
     }
   }
 
-  def serveOrFailStaticFile(request:Request, path:String) = {
+  def serveOrFailStaticFile(request:Request, path:String): Future[Response] = {
     request.routeParams.get("filename") match {
       case Some(filename:String) =>
         val full = path + File.separator + filename
         if(FileResolver.hasFile(full)) {
-          render.static(full).toFuture
+          render.header("Cache-Control", "max-age=31556926")
+                .static(full)
+                .toFuture
         } else {
           render.status(404).plain("").toFuture
         }
