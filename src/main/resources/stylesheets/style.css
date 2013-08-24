@@ -120,23 +120,68 @@ font-weight: 800;
   content: ".\0000a0";
 }
 
+/* Tablet Portrait size to Base 996px */
+@media only screen and (min-width: 768px) and (max-width: 995px) {
+       /* Smaller Resolution Desktops and Laptops */
+       body {
+            padding: 15px;
+       }
+       #knol, #summary, #content { width:100%; }
+       #knol { padding-left: 0; }
+       #knol span { display: inline-block; }
+       #content ul { padding: 0.8em 1em 0.8em 1em; }
+       #footer .grid_4 p { font-size: 0.9em;}
+       #footer .grid_2 p { font-size: 0.85em;}
+}
+
+/* All Mobile Sizes */
+@media only screen and (max-width: 767px) {
+       body { padding: 0; }
+       .container { width: 90%; }
+       canvas, em.draw-hint, #logo { display: none; }
+       #knol, #footer, #content { width:100%; }
+       #summary { padding:0; margin:0; width: 98%; }
+       #knol { padding-left: 0; }
+       #knol span { display: inline-block; }
+       #content ul { padding: 0.5em 1em 0.5em 1em; }
+}
+
+/* Mobile Landscape Size to Tablet Portrait */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+       body { padding: 0; }
+       canvas, em.draw-hint { display: none; }
+       #knol, #summary, #content { width:100%; }
+       #knol { padding-left: 0; }
+       #knol span { display: inline-block; }
+       #content ul { padding: 0 1em 0 1em; }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size */
+@media only screen and (max-width: 479px) {
+       body { padding: 0; }
+       canvas, em.draw-hint { display: none; }
+       #knol, #summary, #content { width:100%; }
+       #knol { padding-left: 0; }
+       #content ul { padding: 0 0.5em 0 0.5em; }
+}
+
 @media print {
-body {
-font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
-font-weight: normal;
-color: black;
-color: rgba(0,0,0,1);
-height:auto;
-width:auto;
-}
+    body {
+    font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: black;
+    color: rgba(0,0,0,1);
+    height:auto;
+    width:auto;
+    }
 
-em.draw-hint { display: none !important; }
-#canvas { display: none; height:0; width:0; }
+    em.draw-hint { display: none !important; }
+    #canvas { display: none; height:0; width:0; }
 
-#intro, h1, h2, h3, h4, h5 { 
-font-family: 'Arial', sans-serif;
-text-shadow: 0 0 0 #bbb;
-}
+    #intro, h1, h2, h3, h4, h5 {
+    font-family: 'Arial', sans-serif;
+    text-shadow: 0 0 0 #bbb;
+    }
 
-#knol h2 { border-bottom: 1px dotted black; }
+    #knol h2 { border-bottom: 1px dotted black; }
 }

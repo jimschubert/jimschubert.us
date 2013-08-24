@@ -9,9 +9,11 @@
       {{title}}
     </title>
     <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="author" content="Jim Schubert" />
     <meta name="description" content="Resume: Jim Schubert, Software Developer" />
     <meta name="keywords" content="Jim Schubert, resume, Seattle" />
+	<meta name="viewport" content="width=device-width">
     <style type="text/css">
       /**
        * Antic	SIL Open Font License, 1.1
@@ -35,19 +37,19 @@
         src: local('Black Ops One'), local('BlackOpsOne-Regular'), url(/fonts/BlackOpsOne-Regular.woff) format('woff');
       }
     </style>
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/text.css" />
-    <link rel="stylesheet" href="/css/960.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/grid.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <script type="text/javascript" src="/js/modernizr.js"></script>
     <script type="text/javascript" src="/js/jquery.js"></script>
   </head>
  <body>
-    <div id="wrapper">
-      <canvas id="canvas">
+    <canvas id="canvas">
         <span></span>
-      </canvas>
-      <div id="header" class="container_12">
+    </canvas>
+    <div id="wrapper" class="container clearfix">
+      <div id="header" class="clearfix">
         <div id="intro" class="grid_9">
           Jim Schubert, Software Developer
         </div>
@@ -55,15 +57,15 @@
           <em class="draw-hint">Draw on the background!</em>
         </div>
       </div>
-      <div id="content" class="container_12">
-      <div class="fake-noscript grid_12">
-        <div class="notice">
-          Please enable JavaScript to view this site properly
-        </div>
+      <div id="content" class="container clearfix">
+          <div class="fake-noscript grid_12">
+            <div class="notice">
+              Please enable JavaScript to view this site properly
+            </div>
+          </div>
+          {{body}}
       </div>
-        {{body}}
-      </div>
-      <div id="footer" class="container_12">
+      <div id="footer" class="container clearfix">
         <div class="grid_4">
           <p>Jim Schubert</p>
           <p>james.schubert@gmail.com</p>
