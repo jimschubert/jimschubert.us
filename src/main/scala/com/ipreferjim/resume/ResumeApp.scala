@@ -82,12 +82,8 @@ class ResumeApp extends Controller with ResumeViews {
 
   error { request =>
     request.error match {
-      case Some(e:ArithmeticException) =>
-        render.status(500).plain("whoops!").toFuture
       case Some(e:Unauthorized) =>
         render.status(401).plain("Not Authorized!").toFuture
-      case Some(e:UnsupportedMediaType) =>
-        render.status(415).plain("Unsupported Media Type!").toFuture
       case _ =>
         render.status(500).plain("Something went wrong!").toFuture
     }

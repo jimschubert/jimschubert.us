@@ -47,7 +47,8 @@ class GzipFilter()
     // Ignore HEAD, though in practice this should be behind the HeadFilter
     if (request.method == Method.Get)
     {
-      if( request.getHeader(HttpHeaders.Names.ACCEPT_ENCODING).contains("gzip") )
+      if( request.headers.contains(HttpHeaders.Names.ACCEPT_ENCODING) &&
+          request.getHeader(HttpHeaders.Names.ACCEPT_ENCODING).contains("gzip") )
       {
         Some(request.fileExtension)
       }
