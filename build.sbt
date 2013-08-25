@@ -10,3 +10,5 @@ libraryDependencies ++= Seq(
 "com.twitter" % "finagle-core" % "1.2.3",
 "com.twitter" % "finatra" % "1.3.7"
 )
+
+seq(ScctPlugin.instrumentSettings : _*)

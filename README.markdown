@@ -10,10 +10,17 @@ Generated from Finatra Example. Modified to use sbt.
 
     sbt test
 
-### To put on heroku
+### Code Coverage
 
-    heroku create
-    git push heroku master
+    sbt clean scct:test
+
+Then, open `./target/scala_2.9.2/coverage-report/index.html` in a browser.
+
+Some browsers don't allow ajax over the `file://` protocol.  If you have python installed, navigate to `./target/scala_2.9.2/coverage-report/index.html` and run:
+
+    python -m SimpleHTTPServer
+
+Now, you should be able to access the code coverage report at http://localhost:8000
 
 ### To run anywhere else
 
