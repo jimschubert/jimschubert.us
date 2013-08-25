@@ -5,6 +5,9 @@ import com.twitter.ostrich.stats.Stats
 import scala.tools.nsc.io.File
 import com.twitter.util.Future
 import scala.Some
+import com.twitter.finagle.http.Message
+import java.util.Date
+import org.jboss.netty.handler.codec.http.HttpHeaders
 
 class ResumeApp extends Controller with ResumeViews {
 
@@ -53,7 +56,9 @@ class ResumeApp extends Controller with ResumeViews {
       case Some(filename:String) =>
         val full = path + File.separator + filename
         if(FileResolver.hasFile(full)) {
-          render.header("Cache-Control", "max-age=31556926")
+          render.header(HttpHeaders.Names.CACHE_CONTROL, "max-age=31556926")
+                .header(HttpHeaders.Names.LAST_MODIFIED, Message.httpDateFormat(new Date()))
+                .header(HttpHeaders.Names.VARY, HttpHeaders.Names.ACCEPT_ENCODING)
                 .static(full)
                 .toFuture
         } else {
