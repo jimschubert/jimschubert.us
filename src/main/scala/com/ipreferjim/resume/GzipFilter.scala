@@ -36,9 +36,9 @@ class GzipFilter()
   def gzipCompress(str:String) : Array[Byte] = {
     val os = new ByteArrayOutputStream(str.length())
     val gos = new GZIPOutputStream(os)
-    gos.write(str.getBytes())
+    gos.write(str.getBytes)
     gos.close()
-    val compressed = os.toByteArray()
+    val compressed = os.toByteArray
     os.close()
     compressed
   }

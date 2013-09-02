@@ -12,7 +12,7 @@ import com.twitter.finagle.http.{Request => FinagleRequest, Response => FinagleR
 class ResumeServer extends FinatraServer
 {
   override def initAdminService(runtimeEnv: RuntimeEnvironment) {
-    var adminService = CustomAdminServiceFactory(
+    val adminService = CustomAdminServiceFactory(
       httpPort = Config.getInt("stats_port"),
       statsNodes = StatsFactory(
         reporters = JsonStatsLoggerFactory(serviceName = Some("finatra")) ::

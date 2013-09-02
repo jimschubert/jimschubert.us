@@ -6,9 +6,6 @@ import com.twitter.ostrich.stats.{StatsCollection, Stats}
 import com.twitter.ostrich.admin.AdminServiceFactory
 import com.twitter.ostrich.admin.AdminHttpService
 import com.twitter.util.Duration
-import com.twitter.logging.Logger
-import com.sun.net.httpserver.{HttpExchange, HttpHandler, HttpServer}
-import java.net.{Socket, InetSocketAddress}
 
 case class CustomAdminServiceFactory(
                                       override val httpPort: Int,
@@ -20,9 +17,9 @@ case class CustomAdminServiceFactory(
     configureStatsListeners(Stats)
 
     val statsCollection = statsCollectionName.map {
-      Stats.make(_)
+      Stats.make
     }.getOrElse(Stats)
-    var adminService = new CustomAdminHttpService(httpPort, httpBacklog, statsCollection, runtime)
+    val adminService = new CustomAdminHttpService(httpPort, httpBacklog, statsCollection, runtime)
 
     for (factory <- statsNodes) {
       configureStatsListeners(factory(adminService))
