@@ -37,8 +37,8 @@ html.ie7 a[target="_blank"] {
   background: url(/img/external.png) no-repeat right center;
 }
 
-h1, h2, h3, h4, h5 { 
-font-family: 'Black Ops One', cursive; 
+h1, h2, h3, h4, h5 {
+font-family: 'Black Ops One', cursive;
 text-shadow: 2px 2px 2px #bbb;
 }
 
@@ -93,7 +93,7 @@ canvas#canvas {
 #header { margin-bottom: 0.3em; }
 #footer { margin-top:0.3em; }
 
-.clone.done { 
+.clone.done {
 font-size: 1.5em;
 font-weight: 800;
 }
@@ -108,7 +108,7 @@ font-weight: 800;
 
 .clone.cap { text-transform: uppercase; }
 
-.clone.exclamation:after { 
+.clone.exclamation:after {
   content: "!";
 }
 
@@ -142,22 +142,36 @@ font-weight: 800;
        .container { width: 90%; }
        canvas, em.draw-hint, #logo { display: none; }
        #knol, #footer, #content { width:100%; }
-       #summary { padding:0; margin:0; width: 98%; }
+       #summary { padding:0; margin:0; width: 90%; }
        #knol { padding-left: 0; }
        #knol span { display: inline-block; }
-       #content ul { padding: 0.5em 1em 0.5em 1em; }
+       #content ul { padding: 0.5em 1em 0.5em 1em; list-style-position: inside; }
+       #content ul li {
+           padding-top:5px;
+       }
 }
 
 /* Mobile Landscape Size to Tablet Portrait */
+@media only screen and (max-width: 767px) {
+    #summary { width: 95%; }
+    #content ul {
+        padding-left: 0;
+        list-style-position: inside;
+    }
+    #content ul li {
+        padding-top:5px;
+    }
+}
+
 @media only screen and (min-width: 480px) and (max-width: 767px) {
        body { padding: 0; }
        #intro { font-size: 1.5em; }
        h1 { font-size: 1.6em; }
        canvas, em.draw-hint { display: none; }
-       #knol, #summary, #content { width:100%; }
+       #knol, #content { width:100%; }
        #knol { padding-left: 0; }
        #knol span { display: inline-block; }
-       #content ul { padding: 0 1em 0 1em; }
+       #content ul { padding: 0 1em 0 0; }
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size */
@@ -166,7 +180,7 @@ font-weight: 800;
        #intro { font-size: 1.2em; }
        h1 { font-size: 1.4em; }
        canvas, em.draw-hint { display: none; }
-       #knol, #summary, #content { width:100%; }
+       #knol, #content { width:100%; }
        #knol { padding-left: 0; }
        #content ul { padding: 0 0.5em 0 0.5em; }
        #heading { font-size: 0.9em;}
