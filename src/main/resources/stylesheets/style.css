@@ -120,6 +120,12 @@ font-weight: 800;
   content: ".\0000a0";
 }
 
+@media only screen and (max-width: 860px) {
+  canvas, em.draw-hint {
+    display: none !important;
+  }
+}
+
 /* Tablet Portrait size to Base 996px */
 @media only screen and (min-width: 768px) and (max-width: 995px) {
        /* Smaller Resolution Desktops and Laptops */
@@ -153,6 +159,7 @@ font-weight: 800;
 
 /* Mobile Landscape Size to Tablet Portrait */
 @media only screen and (max-width: 767px) {
+    body { padding: 0; }
     #summary { width: 95%; }
     #content ul {
         padding-left: 0;
@@ -164,10 +171,8 @@ font-weight: 800;
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-       body { padding: 0; }
        #intro { font-size: 1.5em; }
        h1 { font-size: 1.6em; }
-       canvas, em.draw-hint { display: none; }
        #knol, #content { width:100%; }
        #knol { padding-left: 0; }
        #knol span { display: inline-block; }
@@ -176,10 +181,12 @@ font-weight: 800;
 
 /* Mobile Portrait Size to Mobile Landscape Size */
 @media only screen and (max-width: 479px) {
-       body { padding: 0; }
-       #intro { font-size: 1.2em; }
+   #intro {
+        font-size: 1.2em;
+        width:100%;
+        padding:0;
+    }
        h1 { font-size: 1.4em; }
-       canvas, em.draw-hint { display: none; }
        #knol, #content { width:100%; }
        #knol { padding-left: 0; }
        #content ul { padding: 0 0.5em 0 0.5em; }
@@ -188,7 +195,7 @@ font-weight: 800;
 
 @media print {
     body {
-    font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 11px "Lucida Grande", Helvetica, Arial, sans-serif;
     font-weight: normal;
     color: black;
     color: rgba(0,0,0,1);
