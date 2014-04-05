@@ -11,3 +11,6 @@ release.properties
 *.iml
 .idea
 .idea/*
+sbt-launch.jar
+.history
+
