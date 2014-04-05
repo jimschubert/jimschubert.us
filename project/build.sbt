@@ -1,5 +1,5 @@
 resolvers += Classpaths.typesafeResolver
 
-resolvers += "scct-github-repository" at "http://mtkopone.github.com/scct/maven-repo"
+resolvers += "Sonatype OSS Releases" at "https://oss.sonatype.org/content/repositories/releases"
 
-addSbtPlugin("reaktor" % "sbt-scct" % "0.2-SNAPSHOT")
+addSbtPlugin("com.sqality.scct" % "sbt-scct" % "0.2.2")
