@@ -10,4 +10,5 @@ release.properties
 .idea/*
 sbt-launch.jar
 .history
+scripts/sbt-launch.jar
 
