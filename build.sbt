@@ -1,5 +1,7 @@
 name := "resume"
 
+scalaVersion := "2.9.2"
+
 resolvers ++= Seq(
 "twttr" at "http://maven.twttr.com",
 "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",
