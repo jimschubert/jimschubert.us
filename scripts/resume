@@ -1,4 +1,5 @@
 #!/bin/sh
+# borrowed mostly from https://gist.github.com/naholyr/4275302
 
 WORKING=/www/resume-scala
 SCRIPT=$WORKING/scripts/service.sh
