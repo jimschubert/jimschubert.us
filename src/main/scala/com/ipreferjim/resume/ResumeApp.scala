@@ -14,7 +14,8 @@ class ResumeApp extends Controller with ResumeViews {
   get("/") { request =>
     Stats.incr("index")
     Stats.timeFutureMillis("index time") {
-      render.view(Page(IndexView(), "Jim Schubert - Developer")).toFuture
+      render.header(HttpHeaders.Names.CONTENT_TYPE, "text/html; charset=utf-8")
+            .view(Page(IndexView(), "Jim Schubert - Developer")).toFuture
     }
   }
 
@@ -48,6 +49,20 @@ class ResumeApp extends Controller with ResumeViews {
     Stats.incr("stylesheets")
     Stats.timeFutureMillis("css time") {
       serveOrFailStaticFile(request, "stylesheets")
+    }
+  }
+
+  get("/font/:filename") { request =>
+    Stats.incr("fonts")
+    Stats.timeFutureMillis("fonts time") {
+      serveOrFailStaticFile(request, "fonts")
+    }
+  }
+
+  get("/img/:filename") { request =>
+    Stats.incr("images")
+    Stats.timeFutureMillis("images time") {
+      serveOrFailStaticFile(request, "images")
     }
   }
 
