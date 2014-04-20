@@ -168,6 +168,18 @@ font-weight: 800;
     #content ul li {
         padding-top:5px;
     }
+
+   /* Someone's probably on a phone. give more click area, buffer between links because I hate that overlay link selector on Android */
+   div#footer p a {
+    display:block;
+    padding:5px 0;
+    margin:5px 0;
+   }
+
+   div#footer p a[target="_blank"] {
+    background-position: left;
+    padding-left: 15px;
+   }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
