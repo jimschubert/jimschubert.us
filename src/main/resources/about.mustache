@@ -1,3 +1,4 @@
+<script defer="defer" src="js/about.js" type="text/javascript"></script>
 <div class="grid_8">
 <h1>About</h1>
 <small>
@@ -28,7 +29,7 @@ The background drawing uses <a href="http://github.com/jimschubert/brushes.js" t
 a project I worked on shortly to familiarize myself with HTML5 canvas and the 2d context.
 
 If you would like to try some of the other brushes, click a brush name below to reset:
-<ul>
+<ul id="brushSelector">
     <li><a href="#" class="brush">blood</a></li>
     <li><a href="#" class="brush">boxes</a></li>
     <li><a href="#" class="brush">charcoal</a></li>
@@ -37,19 +38,6 @@ If you would like to try some of the other brushes, click a brush name below to 
     <li><a href="#" class="brush">pen</a></li>
     <li><a href="#" class="brush">stars</a></li>
 </ul>
-<script type="text/javascript">
-$(function() {
-    $('a.brush').click(function(e) {
-        var name = $(this).text();
-        window['jimschubert.us brush'] = new Brushes[name]({
-            context: ($('#canvas').get(0).getContext('2d')),
-            size: 12,
-            pressure: 1
-        });
-        return false;
-    });
-});
-</script>
 </p>
 </div>
 <div class="grid_3 prefix_1">

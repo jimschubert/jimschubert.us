@@ -30,7 +30,8 @@ class ResumeApp extends Controller with ResumeViews {
   get("/about") { request =>
     Stats.incr("about")
     Stats.timeFutureMillis("about time") {
-      render.view(Page(AboutView(), "Jim Schubert - About")).toFuture
+      render.header(HttpHeaders.Names.CONTENT_TYPE, "text/html; charset=utf-8")
+            .view(Page(AboutView(), "Jim Schubert - About")).toFuture
     }
   }
 
