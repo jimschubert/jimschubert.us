@@ -14,4 +14,4 @@ release.properties
 sbt-launch.jar
 .history
 scripts/sbt-launch.jar
-
+dist/
