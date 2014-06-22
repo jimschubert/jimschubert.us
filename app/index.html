@@ -1,58 +1,128 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<head>
     <title></title>
-    <meta name="description" content="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Jim Schubert"/>
+    <meta name="description" content="Resume: Jim Schubert, Software Developer"/>
+    <meta name="keywords" content="Jim Schubert, resume, Seattle"/>
     <meta name="viewport" content="width=device-width">
+    <script type="text/javascript">
+        window.name = "NG_DEFER_BOOTSTRAP!";
+    </script>
+    <style type="text/css">
+        /**
+         * Antic	SIL Open Font License, 1.1
+         * Antic-Regular.ttf: Copyright (c) 2010, 2011, Santiago Orozco <hi@typemade.mx>, with Reserved Font Name "Antic"
+         */
+        @font-face {
+            font-family: 'Antic';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Antic'), local('Antic-Regular'), url(fonts/Antic-Regular.woff) format('woff');
+        }
+
+        /**
+         * Black Ops One	SIL Open Font License, 1.1
+         * BlackOpsOne-Regular.ttf: Copyright (c) 2011, Sorkin Type Co (www.sorkintype.com) with Reserved Font Names "Black Ops" and "Black Ops One".
+         */
+        @font-face {
+            font-family: 'Black Ops One';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Black Ops One'), local('BlackOpsOne-Regular'), url(fonts/BlackOpsOne-Regular.woff) format('woff');
+        }
+    </style>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/vendor.css" />
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-  </head>
-  <body ng-app="jimschubertusApp">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+</head>
+<body ng-app="jimschubertusApp">
+
+<canvas id="canvas">
+    <span></span>
+</canvas>
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div id="wrapper" class="container clearfix" ng-controller="MainCtrl">
+    <div id="header" class="clearfix">
+        <div id="intro" class="grid_9" ng-bind="title"></div>
+    </div>
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    <div ng-view=""></div>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <div id="footer" class="container clearfix">
+        <div class="grid_3 suffix_2">
+            <p ng-bind="full_name"></p>
+            <p ng-bind="email"></p>
+            <p ng-if="phone.cell">C: <span ng-bind="phone.cell"></span></p>
+            <p ng-if="phone.home">H: <span ng-bind="phone.home"></span></p>
+        </div>
+        <div class="grid_2">
+            <p ng-repeat="link in footer.external_links">
+                <a ng-href="link.href" target="_blank">{{link.title}}</a>
+            </p>
+        </div>
+        <div class="grid_3 prefix_2">
+            <p>
+                <a href="#/about">About this site</a>
+            </p>
+            <p>
+                <a href="/" ng-bind="origin"></a>
+            </p>
+        </div>
+    </div>
+</div>
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-    <!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.min.js"></script>
-    <![endif]-->
+    ga('create', 'UA-26004786-1');
+    ga('send', 'pageview');
+</script>
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.min.js"></script>
+<![endif]-->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <!-- endbuild -->
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/index.js"></script>
+<!-- endbuild -->
 </body>
 </html>

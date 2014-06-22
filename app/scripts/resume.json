@@ -1,0 +1,364 @@
+{
+    "full_name": "Jim Schubert",
+    "phone": {
+        "home": "",
+        "cell": "804-921-7331"
+    },
+    "email": "james.schubert@gmail.com",
+    "title": "Jim Schubert, Software Developer",
+    "summary": "I'm a web developer who is interested in new technologies and innovative ideas.<br>Passion, excellence, accuracy: these are a few things I bring to the table.<br>Code, humor, food: these are a few more things.<br>I believe that the best code is a product of a fun environment and an amazing team.",
+    "education": [
+        {
+            "institution": "Virginia Commonwealth University",
+            "location": "Richmond, VA",
+            "degree": "Bachelor of Science in Business",
+            "graduation_date": "May 2009",
+            "major": "Information Systems, Application Development",
+            "minor": "",
+            "gpa": 3.98
+        }
+    ],
+    "honors": [
+        "Academic Achievement Award, Spring/Fall 2006, Spring 2007",
+        "William O. Edwards Scholarship for Merit, 2007-2008, 2008-2009",
+        "Member, Beta Gamma Sigma International Business Honor Society, 2008",
+        "Member, Phi Kappa Phi Honor Society, 2008",
+        "Student of the Year Award, Information Systems, VCU School of Business, April 2009"
+    ],
+    "experience": [
+        {
+            "from":"January 2013",
+            "to":"June 2014",
+            "title":"Software Developer Engineer II",
+            "company":"Expedia, Inc.",
+            "location":"Bellevue, WA",
+            "bullets":[
+                "Refactored node.js api which acts as a facade for other services",
+                "Analyzed performance and memory of node.js/JavaScript",
+                "Provided expertise of node.js framework and thirdparty modules to help implement a solid unit test and functional test bed",
+                "Designed maintainable solutions for parameter validation within express.js application",
+                "Created reusable, automatable utilities for maintenance of node.js application (e.g. swagger documentation)",
+                "Improved bash scripts used for build and deployment; automatically verify and install dependencies before build, allow for multiple build profiles",
+                "Helped with feature improvement and maintenance of now legacy PHP system (API and Frontend)",
+                "Drove development and architecture of new API and UI using Scala, SBT, Scalatra, and AngularJS",
+                "Mentored interns and newer developers",
+                "Team master of using and teaching others git"
+            ]
+        },
+        {
+            "from":"January 2012",
+            "to":"January 2013",
+            "title":"Software Engineer",
+            "company":"Enghouse Interactive",
+            "location":"(remote - Richmond, VA)",
+            "bullets":[
+                "Member of development team for call center-centric telephony suite, CallRex",
+                "Maintained and developed documentation and examples for CallRex SDK using Sandcastle for documentation and code written using C#, ASP.NET, Windows Forms",
+                "Performed custom application development on a per customer basis using Windows Forms, ASP.NET, and WCF",
+                "Created maintenance patches of legacy software using C++",
+                "Created a unit-testing and functional-testing process to integrate into the build using MSBuild 4.0",
+                "Created an MSBuild task wrapper around the VIX API to integrate build with VMware Virtual Machines",
+                "Performed analysis and review of customer support issues which generally involved log parsing, packet analysis using Wireshark and occasionally analysis of Windows dump files",
+                "Regularly interacted with customers to resolve issues and deploy custom applications or patches",
+                "Provided an in-depth and expert-level knowledge of C# and ASP.NET in the design process for the conversion of legacy (native C++) code into managed code"
+            ]
+        },
+        {
+            "from":"April 2011",
+            "to":"January 2012",
+            "title":"Senior Software Engineer (C#/ASP.NET)",
+            "company":"Primescape Solutions, Inc.",
+            "location":"Herndon, VA",
+            "bullets":[
+                "Designed and development of software and web applications using Microsoft .NET 3.5 Framework",
+                "Created custom, reusable controls and frameworks for reporting on large data sets",
+                "Owned configuration, setup, and maintenance of collaborative Drupal CMS for global client organization",
+                "DevOps: Linux system administration on dedicated server hosting Drupal CMS"
+            ]
+        },
+        {
+            "from":"October 2010",
+            "to":"April 2011",
+            "title":"Software Developer Engineer II",
+            "company":"Expedia, Inc.",
+            "location":"Bellevue, WA",
+            "bullets":[
+                "Instrumental in the interview process for Senior .NET Software Developer Engineers",
+                "Researched available technology solutions in a variety of areas: localization, performance monitoring, logging",
+                "Team: prepared a demonstration application using ASP.NET MVC 2.0 (Web Forms View Engine)",
+                "Team: scalable, high-availability public-facing web application using ASP.NET MVC 3.0 (Razor View Engine)",
+                "Involved in a majority of the construction phase for B2B site"
+            ]
+        },
+        {
+            "from":"September 2009",
+            "to":"November 2010",
+            "title":"Consultant / Software & Web Application Developer",
+            "company":"Primescape Solutions, Inc.",
+            "location":"Herndon, VA",
+            "bullets":[
+                "Performed major enhancements and added functionality to a grants/budget management web application using ASP.NET/C# and Oracle 9i",
+                "Upgraded the grants/budget management web application from .NET 1.1 to .NET 3.5 SP1",
+                "Complied with coding and security standards for Federal Government client",
+                "Designed and developed application architecture and data access components",
+                "Interacted directly with Federal Government clients",
+                "Involved in entire Software Development Lifecycle"
+            ]
+        },
+        {
+            "from":"September 2008",
+            "to":"February 2009",
+            "title":"Intern - Software Developer",
+            "company":"Agility Healthcare Solutions (GE Healthcare)",
+            "location":"Richmond, VA",
+            "bullets":[
+                "Performed bug fixes and application enhancements in an HL7-compliant Rich Internet Application using ASP.NET 3.5 and C#",
+                "Worked with development team as part of a mixed Agile and Scrum methodology",
+                "Provided feedback on application complexity and usability to team leader"
+            ]
+        },
+        {
+            "from":"January 2008",
+            "to":"Present",
+            "title":"Software & Web Application Developer / Administrator",
+            "company":"Open Source/Personal/Freelance Projects",
+            "location":"Richmond, VA",
+            "bullets":[
+                "Open-source project: brushes.js - Brushes for HTML5 Canvas, 2d context",
+                "Open-source project: Google Chrome Extension- \"New Tab Redirect!\"",
+                "Open-source project: Google Chrome Extension- \"Select Actions\"",
+                "Web Site: \"alittlebirdy.us\" <a href=\"http://alittlebirdy.herokuapp.com/\" target=\"_blank\">alittlebirdy.us</a>",
+                "Web Site: \"Comix!\" <a href=\"http://www.drawcomix.com\" target=\"_blank\">DrawComix.com</a>",
+                "Web Site: Admin/Wordpress- \"I Prefer Jim\" <a href=\"http://www.ipreferjim.com\" target=\"_blank\">Ipreferjim.com</a>",
+                "Web Site: Wordpress- \"Ben's Creative Catering\" <a href=\"http://www.benscreativecatering.com\" target=\"_blank\">BensCreativeCatering.com</a>",
+                "Web Site: Admin/Wordpress- \"Schubert Solutions\", SchubertSolutions.com (old)"
+            ]
+        }
+    ],
+    "written": [
+        {
+            "url": "https://leanpub.com/yfa-nodejs",
+            "title": "Your First App: Node.js",
+            "summary": "A work-in-progress self published book about the development life cycle of a node.js stack. Free with coupon <strong>SawYourResume</strong>"
+        },
+        {
+            "url": "http://jimschubert.github.io/masteringnode/",
+            "title": "Mastering Node",
+            "summary": "Contributions to open-source ebook on node.js development"
+        }
+    ],
+    "skills": {
+      "development": [
+          {
+              "name": "node.js",
+              "rank": 0.90
+          },
+          {
+              "name": "Scala",
+              "rank": 0.80
+          },
+          {
+              "name": "Visual C++",
+              "rank": 0.7
+          },
+          {
+              "name": "XML/XSL",
+              "rank": 0.55
+          },
+          {
+              "name": "C#/.NET",
+              "rank": 0.99
+          },
+          {
+              "name": "Ruby",
+              "rank": 0.65
+          },
+          {
+              "name": "Java",
+              "rank": 0.30
+          },
+          {
+              "name": "PHP",
+              "rank": 0.40
+          },
+          {
+              "name": ".NET 1.1-4.0",
+              "rank": 0.90
+          }
+      ],
+      "tools": [
+          {
+              "name": "SBT",
+              "rank": 0.60
+          },
+          {
+              "name": "Jenkins",
+              "rank": 0.30
+          },
+          {
+              "name": "Cucumber/Gherkin",
+              "rank": 0.40
+          },
+          {
+              "name": "Visual Studio",
+              "rank": 0.80
+          },
+          {
+              "name": "IntelliJ",
+              "rank": 0.70
+          }
+      ],
+      "web": [
+          {
+              "name": "ASP.NET MVC",
+              "rank": 0.80
+          },
+          {
+              "name": "ASP.NET WebForms",
+              "rank": 0.90
+          },
+          {
+              "name": "MVC (Architecture)",
+              "rank": 0.89
+          },
+          {
+              "name": "Scalatra",
+              "rank": 0.77
+          },
+          {
+              "name": "REST APIs",
+              "rank": 0.83
+          },
+          {
+              "name": "Rails (RoR)",
+              "rank": 0.70
+          },
+          {
+              "name": "HTML",
+              "rank": 0.90
+          },
+          {
+              "name": "XHTML",
+              "rank": 0.90
+          },
+          {
+              "name": "CSS",
+              "rank": 0.90
+          },
+          {
+              "name": "JavaScript",
+              "rank": 0.98
+          },
+          {
+              "name": "jQuery",
+              "rank": 0.97
+          },
+          {
+              "name": "AJAX",
+              "rank": 0.96
+          },
+          {
+              "name": "express.js",
+              "rank": 0.93
+          },
+          {
+              "name": "Silex",
+              "rank": 0.82
+          },
+          {
+              "name": "Symfony",
+              "rank": 0.78
+          }
+      ],
+      "deployment": [
+          {
+              "name": "MSBuild",
+              "rank": 0.70
+          },
+          {
+              "name": "Windows Installer XML v3",
+              "rank": 0.74
+          },
+          {
+              "name": "Bash (scripts)",
+              "rank": 0.80
+          }
+      ],
+      "design": [
+          {
+              "name": "Visio",
+              "rank": 0.60
+          },
+          {
+              "name": "Architectural Design",
+              "rank": 0.80
+          },
+          {
+              "name": "Rational Rose",
+              "rank": 0.30
+          },
+          {
+              "name": "REST API",
+              "rank": 0.80
+          }
+      ],
+      "persistence": [
+          {
+              "name": "Linq to SQL",
+              "rank": 0.40
+          },
+          {
+              "name": "Entity Framework",
+              "rank": 0.50
+          },
+          {
+              "name": "ADO.NET",
+              "rank": 0.90
+          },
+          {
+              "name": "Fluent NHibernate",
+              "rank": 0.85
+          },
+          {
+              "name": "MSSQL",
+              "rank": 0.75
+          },
+          {
+              "name": "MySQL",
+              "rank": 0.74
+          },
+          {
+              "name": "SQLite3",
+              "rank": 0.60
+          },
+          {
+              "name": "Oracle",
+              "rank": 0.78
+          },
+          {
+              "name": "VERY (persistent)",
+              "rank": 0.99
+          }
+      ]
+    },
+    "footer":{
+        "external_links": [
+            {
+                "href":"http://bit.ly/JimSchubert-SO",
+                "title":"StackOverflow Profile"
+            },
+            {
+                "href":"http://www.ipreferjim.com",
+                "title":"Development Blog"
+            },
+            {
+                "href":"https://github.com/jimschubert",
+                "title":"jimschubert@github"
+            },
+            {
+                "href":"http://github.com/jimschubert/jimschubert.us",
+                "title":"Fork this resume!"
+            }
+        ]
+    }
+}

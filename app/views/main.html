@@ -1,36 +1,62 @@
-<div class="header">
-  <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
-  </ul>
-  <h3 class="text-muted">jimschubert us</h3>
-</div>
+<div id="content" class="container clearfix">
+    <div id="background" class="grid_8 content-inner">
+        <section id="summary">
+            <h1>Summary</h1>
+            <p ng-bind-html="summary"></p>
+        </section>
 
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
-</div>
+        <section id="education">
+            <h1>Education</h1>
+            <div ng-repeat="e in education">
+                <p>
+                    <span ng-bind="e.institution"></span>, <span ng-bind="e.location"></span>
+                </p>
+                <p>
+                    <span ng-bind="e.degree"></span>, <span ng-bind="e.graduation_date"></span>
+                </p>
+                <p ng-if="e.major">
+                    Major: <span ng-bind="e.major"></span>
+                </p>
+                <p ng-if="e.minor">
+                    Minor: <span ng-bind="e.minor"></span>
+                </p>
+                <p>
+                    GPA: <span ng-bind="e.gpa"></span><span ng-if="e.gpa >= 3.3">, <em>{{gpaDisplayHonor(e.gpa)}}</em></span>
+                </p>
+            </div>
+        </section>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+        <section id="honors">
+            <h1>Honors</h1>
+            <p ng-repeat="h in honors">
+                <span ng-bind="h"></span>
+            </p>
+        </section>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+        <section id="experience">
+            <h1>Experience</h1>
+            <div ng-repeat="e in experience">
+                <p><em ng-bind="e.from"></em>-<em ng-bind="e.to"></em>, <em ng-bind="e.company"></em> <em ng-bind="e.location"></em></p>
+                <strong ng-bind="e.title"></strong>
+                <ul>
+                    <li ng-repeat="b in e.bullets" ng-bind-html="b"></li>
+                </ul>
+            </div>
+        </section>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
+        <section id="written">
+            <h1>Written Work</h1>
+            <dl ng-repeat="w in written">
+                <dt><a ng-href="w.url" target="_blank" ng-bind="w.title"></a></dt>
+                <dd ng-bind-html="w.summary"></dd>
+            </dl>
+        </section>
+    </div>
 
-<div class="footer">
-  <p>♥ from the Yeoman team</p>
+    <div id="knol" class="grid_3 prefix_1 content-inner">
+        <section ng-repeat="(name,items) in skills">
+            <h2 ng-bind="name|uppercase"></h2>
+            <span ng-repeat="i in items" ng-bind="i.name" ng-class="{'expert-ish':i.rank>=.75,'intermediate':i.rank>=.5&&i.rank<.75,'noob':i.rank<.5}"></span>
+        </section>
+    </div>
 </div>
