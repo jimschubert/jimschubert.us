@@ -16,6 +16,10 @@ a {
     color: rgba(0, 50, 220, 0.9);
 }
 
+[ng-cloak] {
+    display:none;
+}
+
 a[target="_blank"] {
     padding: 0 15px 0 0;
     margin: 0 2px;
