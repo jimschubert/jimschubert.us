@@ -1,5 +1,64 @@
 # Resume
 
+This resume site is a static AngularJS application which initially loads `resume.json`, then builds the HTML from that file.
+
+For these directions, I'm assuming code has been cloned to `/www/resume`.
+
+To build:
+
+1. Install node.js 0.10.12 (follow [node.js instructions](http://nodejs.org/))
+2. Navigate to `/www/resume` and install dependencies
+
+    npm install -d
+
+3. Install global dependencies
+
+    sudo npm install -g grunt grunt-cli karma`
+
+4. Create minified resume
+
+    grunt build
+
+
+To serve (in Ubuntu):
+
+1. Install nginx
+
+    sudo apt-get install nginx
+
+2. Create a directory for includes
+
+    mkdir /etc/nginx/includes.d
+    
+3. Copy `scripts/jimschubert.us-common` to `/etc/nginx/includes.d`
+
+    sudo cp /www/resume/scripts/jimschubert.us-common /etc/nginx/includes.d/jimschubert.us-common
+
+4. Copy `scripts/jimschubert.us` to `/etc/nginx/sites-available`
+
+    sudo cp /www/resume/scripts/jimschubert.us /etc/nginx/sites-available/jimschubert.us
+
+5. Link to enabled sites
+
+    ln -s /etc/nginx/sites-available/jimschubert.us /etc/nginx/sites-enabled
+
+6. Make sure `/www/resume/dist` and `/www/resume/app` are accessible to `www-data`
+
+    sudo chown -R $USER:www-data /etc/resume/{dist,app}
+
+7. Remove default sites from nginx
+
+    sudo rm /etc/nginx/sites-available/default
+    sudo rm /etc/nginx/sites-enabled/default
+
+8. Restart nginx
+
+    sudo service nginx restart
+
+## Make it your own
+
+You can fork this resume and configure it to be your own by changing the contents of `resume.json` and updating the nginx scripts described above to reflect your domain.
+
 # MIT License
 
 Copyright (c) 2013 Jim Schubert

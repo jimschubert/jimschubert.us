@@ -1,0 +1,31 @@
+charset utf-8;
+index index.html;
+try_files $uri $uri/ =404;
+
+location ~*  \.(jpg|jpeg|png|gif|ico|woff)$ {
+	gzip on;
+	expires 365d;
+}
+
+location ~* \.(css|js|json)$ {
+	gzip on;
+	expires 7d;
+}
+
+error_page 404 /404.html;
+
+# redirect server error pages to the static page /50x.html
+error_page 500 502 503 504 /50x.html;
+location = /50x.html {
+	root /usr/share/nginx/html;
+}
+
+# deny access to .ht* files (.htaccess)
+location ~ /\.ht {
+	deny all;
+}
+
+location = /favicon.ico {
+	log_not_found off;
+	access_log off;
+}
