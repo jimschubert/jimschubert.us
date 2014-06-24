@@ -27,6 +27,16 @@
     ],
     "experience": [
         {
+            "from":"June 2014",
+            "to":"Present",
+            "title":"Senior Systems Analyst",
+            "company":"Integrated Business Systems, Inc.",
+            "location":"Richmond, VA",
+            "bullets":[
+                "Software construction and maintenance"
+            ]
+        },
+        {
             "from":"January 2013",
             "to":"June 2014",
             "title":"Software Developer Engineer II",
