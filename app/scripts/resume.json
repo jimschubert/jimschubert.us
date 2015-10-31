@@ -29,16 +29,46 @@
     {
       "from": "June 2014",
       "to": "Present",
-      "title": "Senior Systems Analyst",
+      "title": "Senior Systems Analyst / Software Architect",
       "company": "Integrated Business Systems, Inc.",
       "location": "Richmond, VA",
       "bullets": [
-        "Software construction and maintenance using ASP.NET MVC, AngularJS, Kendo UI, SQL Server 2008/2012",
-        "Designed and implemented multiple distributed services using SQL Server Service Broker (External Activation)",
-        "Drive code quality through training, testing, and awareness",
-        "Promote reusable code via NuGet on an internally accessible repository",
-        "Provide guidance in the creation of shareable testing platform",
-        "Offer best practices and solutions to improve processes within Scrum teams"
+        "Mentored Junior and Senior level developers on best practices, processes, and SOLID principles",
+        "Lead refactoring efforts of Business Intelligence product's presentation layer from tightly coupled and loosely organized MVC/jQuery to a Single Page Application with AngularJS and MVC as a RESTful API",
+        "Designed and implemented a messaging and external processing framework on top of SQL Server Service Broker (External Activation) to offload numerous long-running processes from ASP.NET web applications (Message Bus). Implementations included: compiling and printing statements, payment processing, triggered database deployments, configuration",
+        "Integrated Hangfire for short, non-essential batch processing both in-proc in ASP.NET and as external self-hosted Windows services",
+        "Helped design and lead refactoring efforts to introduce Inversion of Control into an existing multi-layered architecture, enabling the configuration-driven transfer of data through the same domain stack to multiple backend systems (i.e. Adapter Pattern for part of SqlCommand)",
+        "Advocated automation testing and provided guidance on testing best practices to improve stability and maintainability of code",
+        "Performed software construction and maintenance using ASP.NET MVC, AngularJS, Kendo UI, SQL Server 2008/2012",
+        "Drove code quality through training, testing, and awareness",
+        "Promoted reusable code via NuGet on an internally accessible repository",
+        "Provided guidance in the conversion of my own test helpers into a shareable testing platform",
+        "Advocated for process improvements within multiple Scrum teams"
+      ],
+      "technologies": [
+        "AngularJS",
+        "ASP.NET",
+        ".NET 3.5",
+        ".NET 4.0",
+        ".NET 4.5",
+        "NUnit",
+        "Windows Forms",
+        "Web API 2",
+        "SQL Server 2008",
+        "SQL Server 2012",
+        "SQL Server Service Broker",
+        "Hangfire",
+        "XML",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "MSBuild",
+        "KendoUI"
+      ],
+      "tools": [
+        "Visual Studio",
+        "TFS",
+        "TFSVC"
       ]
     },
     {
@@ -50,14 +80,48 @@
       "bullets": [
         "Refactored node.js api which acts as a facade for other services",
         "Analyzed performance and memory of node.js/JavaScript",
-        "Provided expertise of node.js framework and thirdparty modules to help implement a solid unit test and functional test bed",
+        "Provided expertise of node.js framework and third-party modules to help implement a solid unit test and functional test bed",
         "Designed maintainable solutions for parameter validation within express.js application",
-        "Created reusable, automatable utilities for maintenance of node.js application (e.g. swagger documentation)",
+        "Created reusable, automatable utilities for maintenance of node.js application (e.g. generate swagger documentation from custom JSDoc comments)",
         "Improved bash scripts used for build and deployment; automatically verify and install dependencies before build, allow for multiple build profiles",
         "Helped with feature improvement and maintenance of now legacy PHP system (API and Frontend)",
-        "Drove development and architecture of new API and UI using Scala, SBT, Scalatra, and AngularJS",
+        "Drove development and architecture of new REST API and UI using Scala, SBT, Scalatra, and AngularJS",
         "Mentored interns and newer developers",
-        "Team master of using and teaching others git"
+        "Team master of using and teaching others git",
+        "Interviewed numerous mid-level and senior-level candidates for the team",
+        "Played a huge role in process improvement (git workflow, code review, peer programming, Scrum processes)"
+      ],
+      "technologies": [
+        "AngularJS",
+        "node.js",
+        "express.js",
+        "MongoDB",
+        "bash",
+        "CentOS",
+        "XML",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Linux",
+        "PHP",
+        "Silex",
+        "Wordpress",
+        "Scala",
+        "Scalatra",
+        "MySQL",
+        "knockout.js"
+      ],
+      "tools": [
+        "IntelliJ",
+        "git",
+        "npm",
+        "AWS",
+        "Jenkins",
+        "Confluence",
+        "GitHub",
+        "Swagger",
+        "SBT",
+        "Jira Agile"
       ]
     },
     {
@@ -70,12 +134,37 @@
         "Member of development team for call center-centric telephony suite, CallRex",
         "Maintained and developed documentation and examples for CallRex SDK using Sandcastle for documentation and code written using C#, ASP.NET, Windows Forms",
         "Performed custom application development on a per customer basis using Windows Forms, ASP.NET, and WCF",
-        "Created maintenance patches of legacy software using C++",
+        "Created maintenance patches of legacy software using C++, particularly related to VoIP packet processing using SIP, SKINNY (SCCP), and RTP",
         "Created a unit-testing and functional-testing process to integrate into the build using MSBuild 4.0",
-        "Created an MSBuild task wrapper around the VIX API to integrate build with VMware Virtual Machines",
-        "Performed analysis and review of customer support issues which generally involved log parsing, packet analysis using Wireshark and occasionally analysis of Windows dump files",
+        "Created an MSBuild task wrapper around the VIX API to integrate build with VMware Virtual Machines and control full system installation, call bootstrapping (packet playback), and data verification as a means of integration and regression testing",
+        "Performed analysis and review of customer support issues which generally involved log parsing, packet analysis using Wireshark, and occasionally analysis of Windows dump files",
         "Regularly interacted with customers to resolve issues and deploy custom applications or patches",
-        "Provided an in-depth and expert-level knowledge of C# and ASP.NET in the design process for the conversion of legacy (native C++) code into managed code"
+        "Provided an in-depth and expert-level knowledge of C# and ASP.NET in the design process for the conversion of legacy (native C++) code into managed code",
+        "Discovered Unicode bug in sip packet header which could corrupt a Windows environment's unmanaged memory at kernel or user space"
+      ],
+      "technologies": [
+        "C++",
+        "ASP.NET",
+        ".NET 3.5",
+        "Windows Forms",
+        "Silverlight",
+        "WCF",
+        "MSTest",
+        "SQL Server 2008",
+        "DB2",
+        "XML",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Linux",
+        "MSBuild"
+      ],
+      "tools": [
+        "Visual Studio",
+        "Subversion",
+        "Wireshark",
+        "Sandcastle",
+        "VMWare"
       ]
     },
     {
@@ -89,6 +178,26 @@
         "Created custom, reusable controls and frameworks for reporting on large data sets",
         "Owned configuration, setup, and maintenance of collaborative Drupal CMS for global client organization",
         "DevOps: Linux system administration on dedicated server hosting Drupal CMS"
+      ],
+      "technologies": [
+        "ASP.NET",
+        ".NET 3.5",
+        "Oracle 9i",
+        "NUnit",
+        "MySQL",
+        "PostgresQL",
+        "XML",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Linux",
+        "CentOS",
+        "Drupal"
+      ],
+      "tools": [
+        "Visual Studio",
+        "Subversion",
+        "Toad"
       ]
     },
     {
@@ -102,7 +211,24 @@
         "Researched available technology solutions in a variety of areas: localization, performance monitoring, logging",
         "Team: prepared a demonstration application using ASP.NET MVC 2.0 (Web Forms View Engine)",
         "Team: scalable, high-availability public-facing web application using ASP.NET MVC 3.0 (Razor View Engine)",
-        "Involved in a majority of the construction phase for B2B site"
+        "Involved in a majority of the construction phase for B2B site",
+        "Researched and implemented automated UI end-to-end testing using Gallio/MbUnit"
+      ],
+      "technologies": [
+        "ASP.NET",
+        ".NET 3.5",
+        "SQL Server 2008",
+        "Gallio/MbUnit",
+        "XML",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "MSBuild"
+      ],
+      "tools": [
+        "Visual Studio",
+        "Perforce",
+        "Confluence"
       ]
     },
     {
@@ -118,6 +244,21 @@
         "Designed and developed application architecture and data access components",
         "Interacted directly with Federal Government clients",
         "Involved in entire Software Development Lifecycle"
+      ],
+      "technologies": [
+        "ASP.NET",
+        ".NET 1.1",
+        ".NET 3.5",
+        "Oracle 9i",
+        "XML",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "tools": [
+        "Visual Studio",
+        "Visual Source Safe",
+        "Toad"
       ]
     },
     {
@@ -129,7 +270,24 @@
       "bullets": [
         "Performed bug fixes and application enhancements in an HL7-compliant Rich Internet Application using ASP.NET 3.5 and C#",
         "Worked with development team as part of a mixed Agile and Scrum methodology",
-        "Provided feedback on application complexity and usability to team leader"
+        "Provided feedback on application complexity and usability to team leader",
+        "Evaluated build process using CruiseControl.NET, MSBuild, Windows Installer XML Toolset (WiX)"
+      ],
+      "technologies": [
+        "ASP.NET",
+        ".NET 3.5",
+        "SQL Server 2005",
+        "Silverlight",
+        "XML",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "MSBuild",
+        "WiX"
+      ],
+      "tools": [
+        "Visual Studio",
+        "Subversion"
       ]
     },
     {
@@ -228,7 +386,15 @@
       },
       {
         "name": "TFS",
-        "rank": 0.20
+        "rank": 0.50
+      },
+      {
+        "name": "Wireshark",
+        "rank": 0.45
+      },
+      {
+        "name": "WiX Toolset",
+        "rank": 0.65
       }
     ],
     "web": [
@@ -303,6 +469,14 @@
       {
         "name": "Kendo UI",
         "rank": 0.10
+      },
+      {
+        "name": "AngularJS",
+        "rank": 0.99
+      },
+      {
+        "name": "Web API 2",
+        "rank": 0.79
       }
     ],
     "deployment": [
@@ -311,7 +485,7 @@
         "rank": 0.70
       },
       {
-        "name": "Windows Installer XML v3",
+        "name": "Windows Installer XML",
         "rank": 0.74
       },
       {
@@ -361,6 +535,10 @@
       {
         "name": "MySQL",
         "rank": 0.74
+      },
+      {
+        "name": "PostgresQL",
+        "rank": 0.44
       },
       {
         "name": "SQL Server",

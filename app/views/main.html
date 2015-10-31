@@ -41,6 +41,17 @@
                 <ul>
                     <li ng-repeat="b in e.bullets" ng-bind-html="b"></li>
                 </ul>
+
+                <p class="extra tech" ng-if="e.technologies">
+                  <strong>Technologies</strong>
+                  <span ng-repeat="t in e.technologies" ng-bind="t" ng-class="{'last': $last}"></span>
+                </p>
+
+                <p class="extra tools" ng-if="e.tools">
+                  <strong>Tools</strong>
+                  <span ng-repeat="t in e.tools" ng-bind="t" ng-class="{'last': $last}"></span>
+                </p>
+                <hr class="shmancy" ng-if="!$last"/>
             </div>
         </section>
 

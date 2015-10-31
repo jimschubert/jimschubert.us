@@ -182,6 +182,31 @@ canvas#canvas {
     margin-top: 28px;
 }
 
+p.extra {
+  margin: 0.8em 0;
+}
+
+p.extra strong {
+  display:block;
+}
+
+p.extra span:not(.last):after {
+	content: ', ';
+}
+
+hr.shmancy {
+	border-top: 1px solid #8c8b8b;
+	text-align: center;
+  margin:20px 0;
+}
+hr.shmancy:after {
+	content: '⌨';
+	display: inline-block;
+	position: relative;
+	top: -15px;
+	font-size: 24px;
+}
+
 @media only screen and (max-width: 860px) {
     canvas, em.draw-hint {
         display: none !important;
@@ -388,4 +413,3 @@ canvas#canvas {
         border-bottom: 1px dotted black;
     }
 }
-
