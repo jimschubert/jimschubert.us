@@ -14,6 +14,11 @@ angular.module('jimschubertusApp', [ 'ngSanitize', 'ngRoute'])
             .otherwise({
                 redirectTo: '/'
             });
+    })
+    .run(function($rootScope, $anchorScroll){
+      $rootScope.$on('$routeChangeSuccess', function(){
+        $anchorScroll();
+      });
     });
 
 angular.element(document).ready(
