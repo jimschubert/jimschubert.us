@@ -62,9 +62,9 @@
             <p ng-if="phone.cell">C: <span ng-bind="phone.cell"></span></p>
             <p ng-if="phone.home">H: <span ng-bind="phone.home"></span></p>
         </div>
-        <div class="grid_2">
+        <div class="grid_2" ng-if="footer.external_links">
             <p ng-repeat="link in footer.external_links">
-                <a ng-href="link.href" target="_blank">{{link.title}}</a>
+                <a ng-href="{{link.href}}" target="_blank">{{link.title}}</a>
             </p>
         </div>
         <div class="grid_3 prefix_2">
