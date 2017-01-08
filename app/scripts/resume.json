@@ -27,6 +27,33 @@
   ],
   "experience": [ 
     {
+      "from": "May 2016",
+      "to": "Present",
+      "title": "Contributor, Swagger Codegen Core Team",
+      "company": "None: Individual, Open Source",
+      "location": "(remote - Richmond, VA)",
+      "bullets": [
+        "Maintain C# client and ASP.NET Core server generators",
+        "Collaborate with Swagger Codegen community via issues and pull requests",
+        "Provided initial implementation of .swagger-codegen-ignore processing",
+        "Bug fixes in areas oustide the reponsibilities of my generators (Maven Plugin)",
+        "Contributed alpine-based Docker image, reducing image size from ~700MB to ~200MB",
+        "Moderately sized refactoring efforts, requiring distributed coordination with core team and community"
+      ],
+      "technologies": [
+        "Java",
+        "Maven",
+        "C#",
+        "ASP.NET Core",
+        "TestNG"
+      ],
+      "tools": [
+        "IntelliJ",
+        "Docker",
+        "GitHub"
+      ]
+    },
+    {
       "from": "March 2016",
       "to": "Present",
       "title": "Senior Software Engineer",
