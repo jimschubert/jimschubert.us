@@ -358,6 +358,12 @@ hr.shmancy:after {
 
 /* Mobile Portrait Size to Mobile Landscape Size */
 @media only screen and (max-width: 479px) {
+    section, article, #background, #summary {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
     #intro {
         font-size: 1.2em;
         width: 100%;
@@ -370,6 +376,7 @@ hr.shmancy:after {
 
     #knol, #content {
         width: 100%;
+        padding:0;
     }
 
     #knol {
@@ -383,6 +390,21 @@ hr.shmancy:after {
     #heading {
         font-size: 0.9em;
     }
+
+    article header {
+        margin: 0.2em;
+    }
+
+    article p, article strong {
+        padding: 0.4em;
+    }
+
+    hr.shmancy { color: rgba(0,0,0,0) }
+
+    p { line-height: 1.3em; }
+
+    li { list-style-position: initial; }
+    li:before { content: "∙ "; }
 }
 
 @media print {
