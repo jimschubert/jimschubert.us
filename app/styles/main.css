@@ -2,7 +2,7 @@
 body {
     padding: 20px;
     font: 14px "Antic", "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: rgba(31, 94, 255, 0.36);
+    background-color: rgba(158,209, 255, 1);
     color: rgba(0, 0, 0, 0.8);
     z-index: -500;
     -webkit-user-select: none;
