@@ -57,15 +57,15 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div id="wrapper" class="container clearfix" ng-controller="MainCtrl" ng-cloak="">
-    <div id="header" class="clearfix">
+<section id="wrapper" class="container clearfix" ng-controller="MainCtrl" ng-cloak="">
+    <header id="header" class="clearfix">
         <div id="intro" class="grid_9" ng-bind="title"></div>
-    </div>
+    </header>
 
     <!-- Add your site or application content here -->
     <div ng-view=""></div>
 
-    <div id="footer" class="container clearfix">
+    <footer id="footer" class="container clearfix">
         <div class="grid_3 suffix_2">
             <p ng-bind="full_name"></p>
             <p ng-bind="email"></p>
@@ -85,8 +85,8 @@
                 <a href="/" ng-bind="origin"></a>
             </p>
         </div>
-    </div>
-</div>
+    </footer>
+</section>
 
 <script>
     (function (i, s, o, g, r, a, m) {

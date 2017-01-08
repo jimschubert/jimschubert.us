@@ -1,12 +1,12 @@
 <div id="content" class="container clearfix">
-    <div id="background" class="grid_8 content-inner">
-        <section id="summary">
-            <h1>Summary</h1>
+    <section id="background" class="grid_8 content-inner">
+        <article id="summary">
+            <header>Summary</header>
             <p ng-bind-html="summary"></p>
-        </section>
+        </article>
 
-        <section id="education">
-            <h1>Education</h1>
+        <article id="education">
+            <header>Education</header>
             <div ng-repeat="e in education">
                 <p>
                     <span ng-bind="e.institution"></span>, <span ng-bind="e.location"></span>
@@ -24,17 +24,17 @@
                     GPA: <span ng-bind="e.gpa"></span><span ng-if="e.gpa >= 3.3">, <em>{{gpaDisplayHonor(e.gpa)}}</em></span>
                 </p>
             </div>
-        </section>
+        </article>
 
-        <section id="honors">
-            <h1>Honors</h1>
+        <article id="honors">
+            <header>Honors</header>
             <p ng-repeat="h in honors">
                 <span ng-bind="h"></span>
             </p>
-        </section>
+        </article>
 
-        <section id="experience">
-            <h1>Experience</h1>
+        <article id="experience">
+            <header>Experience</header>
             <div ng-repeat="e in experience">
                 <p><em ng-bind="e.from"></em>-<em ng-bind="e.to"></em>, <em ng-bind="e.company"></em> <em ng-bind="e.location"></em></p>
                 <strong ng-bind="e.title"></strong>
@@ -53,21 +53,21 @@
                 </p>
                 <hr class="shmancy" ng-if="!$last"/>
             </div>
-        </section>
+        </article>
 
-        <section id="written">
-            <h1>Written Work</h1>
+        <article id="written">
+            <header>Written Work</header>
             <dl ng-repeat="w in written">
                 <dt><a ng-href="w.url" target="_blank" ng-bind="w.title"></a></dt>
                 <dd ng-bind-html="w.summary"></dd>
             </dl>
-        </section>
-    </div>
+        </article>
+    </section>
 
-    <div id="knol" class="grid_3 prefix_1 content-inner">
-        <section ng-repeat="(name,items) in skills">
-            <h2 ng-bind="name|uppercase"></h2>
+    <section id="knol" class="grid_3 prefix_1 content-inner">
+        <article ng-repeat="(name,items) in skills">
+            <header ng-bind="name|uppercase"></header>
             <span ng-repeat="i in items" ng-bind="i.name" ng-class="{'expert-ish':i.rank>=.75,'intermediate':i.rank>=.5&&i.rank<.75,'noob':i.rank<.5}"></span>
-        </section>
-    </div>
+        </article>
+    </section>
 </div>

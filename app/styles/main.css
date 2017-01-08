@@ -30,7 +30,7 @@ html.ie7 a[target="_blank"] {
     background: url(images/external.png) no-repeat right center;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, header {
     font-family: 'Black Ops One', cursive;
     text-shadow: 2px 2px 2px #bbb;
 }
@@ -78,16 +78,17 @@ canvas#canvas {
     -moz-border-radius: 4px;
 }
 
-#content h1 {
+#content h1, #content header {
     margin-top: 0.5em;
     margin-bottom: 0.2em;
+    font-size: 1.3em;
 }
 
 #content ul {
     margin-top: 0.2em;
 }
 
-#knol h2 {
+#knol h2, #knol header {
     margin-bottom: 0.1em;
     margin-top: 0.4em;
 }
@@ -238,7 +239,7 @@ hr.shmancy:after {
     /* Smaller Resolution Desktops and Laptops */
     body { padding: 15px; }
     #intro { font-size: 1.8em; }
-    h1 { font-size: 1.8em; }
+    h1, header { font-size: 1.8em; }
     #knol, #background, #content { width:100%; }
     #knol { padding-left: 0; }
     #knol span { display: inline-block; }
@@ -257,7 +258,7 @@ hr.shmancy:after {
         font-size: 1.6em;
     }
 
-    h1 {
+    h1, header {
         font-size: 1.7em;
     }
 
@@ -317,13 +318,13 @@ hr.shmancy:after {
     }
 
     /* Someone's probably on a phone. give more click area, buffer between links because I hate that overlay link selector on Android */
-    div#footer p a {
+    #footer p a {
         display: block;
         padding: 5px 0;
         margin: 5px 0;
     }
 
-    div#footer p a[target="_blank"] {
+    #footer p a[target="_blank"] {
         background-position: left;
         padding-left: 15px;
     }
@@ -334,7 +335,7 @@ hr.shmancy:after {
         font-size: 1.5em;
     }
 
-    h1 {
+    h1, header {
         font-size: 1.6em;
     }
 
@@ -363,7 +364,7 @@ hr.shmancy:after {
         padding: 0;
     }
 
-    h1 {
+    h1, header {
         font-size: 1.4em;
     }
 
@@ -404,12 +405,12 @@ hr.shmancy:after {
         width: 0;
     }
 
-    #intro, h1, h2, h3, h4, h5 {
+    #intro, h1, h2, h3, h4, h5, header {
         font-family: 'Arial', sans-serif;
         text-shadow: 0 0 0 #bbb;
     }
 
-    #knol h2 {
+    #knol h2, #knol header {
         border-bottom: 1px dotted black;
     }
 }
