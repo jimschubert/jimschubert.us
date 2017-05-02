@@ -58,7 +58,7 @@
         <article id="written">
             <header>Written Work</header>
             <dl ng-repeat="w in written">
-                <dt><a ng-href="w.url" target="_blank" ng-bind="w.title"></a></dt>
+                <dt><a ng-href="{{w.url}}" target="_blank" ng-bind="w.title"></a></dt>
                 <dd ng-bind-html="w.summary"></dd>
             </dl>
         </article>
