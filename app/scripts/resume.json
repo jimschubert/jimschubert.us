@@ -25,7 +25,7 @@
     "Member, Phi Kappa Phi Honor Society, 2008",
     "Student of the Year Award, Information Systems, VCU School of Business, April 2009"
   ],
-  "experience": [ 
+  "experience": [
     {
       "from": "May 2016",
       "to": "Present",
@@ -357,11 +357,10 @@
       "company": "Open Source/Personal/Freelance Projects",
       "location": "Richmond, VA",
       "bullets": [
-        "Open-source project: brushes.js - Brushes for HTML5 Canvas, 2d context",
         "Open-source project: Google Chrome Extension- \"New Tab Redirect!\"",
         "Open-source project: Google Chrome Extension- \"Select Actions\"",
-        "Web Site: \"alittlebirdy.us\" <a href=\"http://alittlebirdy.herokuapp.com/\" target=\"_blank\">alittlebirdy.us</a>",
-        "Web Site: \"Comix!\" <a href=\"http://www.drawcomix.com\" target=\"_blank\">DrawComix.com</a>",
+        "Open-source project: brushes.js - Brushes for HTML5 Canvas, 2d context",
+        "Web Site: \"Comix!\" <a href=\"http://comix.jimschubert.us\" target=\"_blank\">comix.jimschubert.us</a>",
         "Web Site: Admin/Wordpress- \"I Prefer Jim\" <a href=\"http://www.ipreferjim.com\" target=\"_blank\">Ipreferjim.com</a>",
         "Web Site: Wordpress- \"Ben's Creative Catering\" <a href=\"http://www.benscreativecatering.com\" target=\"_blank\">BensCreativeCatering.com</a>",
         "Web Site: Admin/Wordpress- \"Schubert Solutions\", SchubertSolutions.com (old)"
