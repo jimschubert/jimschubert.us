@@ -208,6 +208,10 @@ hr.shmancy:after {
 	font-size: 24px;
 }
 
+.print_only {
+  display: none;
+}
+
 @media only screen and (max-width: 860px) {
     canvas, em.draw-hint {
         display: none !important;
@@ -434,5 +438,13 @@ hr.shmancy:after {
 
     #knol h2, #knol header {
         border-bottom: 1px dotted black;
+    }
+
+    .print_only {
+      display: block;
+    }
+
+    footer a {
+      display: none;
     }
 }

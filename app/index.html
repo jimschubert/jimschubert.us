@@ -14,11 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript">
         window.name = "NG_DEFER_BOOTSTRAP!";
-        
+
         console.log(
-        [' _______ __               _______        __           __                __', 
+        [' _______ __               _______        __           __                __',
          '|   _   |__|.--------.   |   _   |.----.|  |--.--.--.|  |--.-----.----.|  |_',
-         '|___|   |  ||        |   |   1___||  __||     |  |  ||  _  |  -__|   _||   _|', 
+         '|___|   |  ||        |   |   1___||  __||     |  |  ||  _  |  -__|   _||   _|',
          '|.  |   |__||__|__|__|   |____   ||____||__|__|_____||_____|_____|__|  |____|',
          '|:  1   |                |:  1   |',
          '|::.. . |                |::.. . |',
@@ -66,18 +66,19 @@
     <div ng-view=""></div>
 
     <footer id="footer" class="container clearfix">
-        <div class="grid_3 suffix_2">
+        <div class="grid_4">
             <p ng-bind="full_name"></p>
             <p ng-bind="email"></p>
             <p ng-if="phone.cell">C: <span ng-bind="phone.cell"></span></p>
             <p ng-if="phone.home">H: <span ng-bind="phone.home"></span></p>
         </div>
-        <div class="grid_2" ng-if="footer.external_links">
+        <div class="grid_4" ng-if="footer.external_links">
             <p ng-repeat="link in footer.external_links">
                 <a ng-href="{{link.href}}" target="_blank">{{link.title}}</a>
+                <span class="print_only" ng-bind="'{{link.title}}' + ': ' + '{{link.href}}'"></span>
             </p>
         </div>
-        <div class="grid_3 prefix_2">
+        <div class="grid_4">
             <p>
                 <a href="#/about">About this site</a>
             </p>

@@ -5,8 +5,8 @@
     "cell": "804-921-7331"
   },
   "email": "james.schubert@gmail.com",
-  "title": "Jim Schubert, Software Developer",
-  "summary": "I'm a web developer who is interested in new technologies and innovative ideas.<br>Passion, excellence, accuracy: these are a few things I bring to the table.<br>Code, humor, food: these are a few more things.<br>I believe that the best code is a product of a fun environment and an amazing team.",
+  "title": "Jim Schubert, Software Engineer",
+  "summary": "I'm a Full Stack Software Engineer who is interested in new technologies and innovative ideas.<br>Passion, excellence, accuracy: these are a few things I bring to the table.<br>Code, humor, food: these are a few more things.<br>I believe that the best code is a product of a fun environment and an amazing team.",
   "education": [
     {
       "institution": "Virginia Commonwealth University",
@@ -369,9 +369,9 @@
   ],
   "written": [
     {
-      "url": "https://leanpub.com/yfa-nodejs",
+      "url": "https://leanpub.com/yfa-nodejs/c/SawYourResume",
       "title": "Your First App: Node.js",
-      "summary": "A work-in-progress self published book about the development life cycle of a node.js stack. Free with coupon <strong>SawYourResume</strong>"
+      "summary": "A self published book about the development life cycle of a node.js stack. Free with coupon <strong>SawYourResume</strong>"
     },
     {
       "url": "http://jimschubert.github.io/masteringnode/",
