@@ -289,7 +289,7 @@ module.exports = function (grunt) {
         'imagemin',
         'svgmin'
       ]
-    },
+    }
 
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
@@ -316,14 +316,6 @@ module.exports = function (grunt) {
     // concat: {
     //   dist: {}
     // },
-
-    // Test settings
-    karma: {
-      unit: {
-        configFile: 'karma.conf.js',
-        singleRun: true
-      }
-    }
   });
 
 
@@ -346,14 +338,6 @@ module.exports = function (grunt) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve']);
   });
-
-  grunt.registerTask('test', [
-    'clean:server',
-    'concurrent:test',
-    'autoprefixer',
-    'connect:test',
-    'karma'
-  ]);
 
   grunt.registerTask('build', [
     'clean:dist',
