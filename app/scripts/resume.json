@@ -38,14 +38,19 @@
         "Provided initial implementation of .swagger-codegen-ignore processing",
         "Bug fixes in areas oustide the reponsibilities of my generators (Maven Plugin)",
         "Contributed alpine-based Docker image, reducing image size from ~700MB to ~200MB",
-        "Moderately sized refactoring efforts, requiring distributed coordination with core team and community"
+        "Moderately sized refactoring efforts, requiring distributed coordination with core team and community",
+        "Provided initial implementation of Kotlin client (Java/Android) and Kotlin server (ktor framework) generators",
+        "Provided initial implementation of ASP.NET Core server generator",
+        "Provided initial implementation of Scala server (Finch framework) generator"
       ],
       "technologies": [
         "Java",
         "Maven",
         "C#",
         "ASP.NET Core",
-        "TestNG"
+        "TestNG",
+        "Scala",
+        "Kotlin"
       ],
       "tools": [
         "IntelliJ",
@@ -63,7 +68,9 @@
         "Participate in the design and construction of Microservices Architecture for new project(s)",
         "Create reusable developer tools to increase developer productivity (sbt plugin, docker composed network)",
         "Mentor Junior and Senior level developers on best practices, processes, and SOLID principles",
-        "Provide process improvement suggestions and strategies for new team construction"
+        "Provide process improvement suggestions and strategies for new team construction",
+        "Lead refactoring efforts in database migration from MySQL to PostgreSQL",
+        "Team contribution to Spark Structured Streaming distributed data processing pipeline"
       ],
       "technologies": [
         "Scala",
@@ -77,7 +84,9 @@
         "Docker",
         "MySQL",
         "AWS",
-        "Kotlin"
+        "Kotlin",
+        "PostgreSQL",
+        "Spark"
       ],
       "tools": [
         "IntelliJ",
