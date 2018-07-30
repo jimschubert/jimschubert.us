@@ -27,10 +27,38 @@
   ],
   "experience": [
     {
-      "from": "May 2016",
+      "from": "June 2018",
       "to": "Present",
+      "title": "Founding Member, OpenAPI Generator and OpenAPI Tools",
+      "company": "Individual, Open Source",
+      "location": "(remote - Richmond, VA)",
+      "bullets": [
+        "Help lead and maintain a community fork of Swagger Codegen",
+        "Collaborate with OpenAPI Generator community",
+        "Initial implementation of Gradle Plugin for OpenAPI Generator",
+        "Ongoing investigation into process improvement (tooling, pipeline, publishing)"
+      ],
+      "technologies": [
+        "Java",
+        "Maven",
+        "C#",
+        "ASP.NET Core",
+        "TestNG",
+        "Scala",
+        "Kotlin",
+        "Gradle"
+      ],
+      "tools": [
+        "IntelliJ",
+        "Docker",
+        "GitHub"
+      ]
+    },
+    {
+      "from": "May 2016",
+      "to": "June 2018",
       "title": "Contributor, Swagger Codegen Core Team",
-      "company": "None: Individual, Open Source",
+      "company": "Individual, Open Source",
       "location": "(remote - Richmond, VA)",
       "bullets": [
         "Maintain C# client and ASP.NET Core server generators",
@@ -366,26 +394,27 @@
       "company": "Open Source/Personal/Freelance Projects",
       "location": "Richmond, VA",
       "bullets": [
-        "Open-source project: Google Chrome Extension- \"New Tab Redirect!\"",
-        "Open-source project: Google Chrome Extension- \"Select Actions\"",
-        "Open-source project: brushes.js - Brushes for HTML5 Canvas, 2d context",
-        "Web Site: \"Comix!\" <a href=\"http://comix.jimschubert.us\" target=\"_blank\">comix.jimschubert.us</a>",
+        "Open-source project: <a href=\"https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna\" target=\"_blank\">New Tab Redirect!</a>, a Google Chrome Extension",
+        "Open-source project: <a href=\"https://github.com/jimschubert/intellij-openapi-generator\" target=\"_blank\">IntelliJ OpenAPI Generator Plugin</a>",
+        "Open-source project: <a href=\"https://github.com/jimschubert/kopper\" target=\"_blank\">Kopper</a>, a Kotlin CLI option parser",
+        "Open-source project: <a href=\"https://gitlab.com/jimschubert/iggy/\" target=\"_blank\">Iggy</a>, an ignore-file processor (ala .gitignore) for Java",
+        "Open-source project: <a href=\"https://hub.docker.com/r/jimschubert/swagger-codegen-cli/\" target=\"_blank\">swagger-codegen-cli</a> Docker image",
+        "Open-source project: <a href=\"https://hub.docker.com/r/jimschubert/8-jdk-alpine-mvn/\" target=\"_blank\">8-jdk-alpine-maven</a> Docker image",
         "Web Site: Admin/Wordpress- \"I Prefer Jim\" <a href=\"http://www.ipreferjim.com\" target=\"_blank\">Ipreferjim.com</a>",
-        "Web Site: Wordpress- \"Ben's Creative Catering\" <a href=\"http://www.benscreativecatering.com\" target=\"_blank\">BensCreativeCatering.com</a>",
-        "Web Site: Admin/Wordpress- \"Schubert Solutions\", SchubertSolutions.com (old)"
+        "Open-source project: brushes.js - Brushes for HTML5 Canvas, 2d context"
       ]
     }
   ],
   "written": [
     {
-      "url": "https://leanpub.com/yfa-nodejs/c/SawYourResume",
-      "title": "Your First App: Node.js",
-      "summary": "A self published book about the development life cycle of a node.js stack. Free with coupon <strong>SawYourResume</strong>"
+      "url": "https://yourfirstapp.us/",
+      "title": "'Your First App: Node.js' by Jim Schubert",
+      "summary": "I self published this book about the development life cycle of a full-stack node.js application, using Express/Angular/MongoDB."
     },
     {
-      "url": "http://jimschubert.github.io/masteringnode/",
-      "title": "Mastering Node",
-      "summary": "Contributions to open-source ebook on node.js development"
+      "url": "https://www.packtpub.com/web-development/deploying-nodejs",
+      "title": "'Deploying Node.js' by Sandro Pasquali",
+      "summary": "I was a technical reviewer for this book, which focused on the building, testing, deploying, monitoring, and maintenance of node.js applications."
     }
   ],
   "skills": {
@@ -478,7 +507,11 @@
       },
       {
         "name": "Docker",
-        "rank": 0.70
+        "rank": 0.90
+      },
+      {
+        "name": "OpenAPI Generator",
+        "rank": 0.88
       },
       {
         "name": "Swagger Codegen",
