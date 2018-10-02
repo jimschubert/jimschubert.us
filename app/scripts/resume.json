@@ -55,6 +55,44 @@
       ]
     },
     {
+      "from": "March 2016",
+      "to": "Present",
+      "title": "Senior Software Engineer",
+      "company": "Expedia, Inc.",
+      "location": "(remote - Richmond, VA)",
+      "bullets": [
+        "Participate in the design and construction of Microservices Architecture for new project(s)",
+        "Create reusable developer tools to increase developer productivity (sbt plugin, docker composed network)",
+        "Mentor Junior and Senior level developers on best practices, processes, and SOLID principles",
+        "Provide process improvement suggestions and strategies for new team construction",
+        "Lead refactoring efforts in database migration from MySQL to PostgreSQL",
+        "Lead multiple workstreams (Spark Pipeline/DevOps, new API development, legacy API management)",
+        "Team contribution to Spark Structured Streaming distributed data processing pipeline"
+      ],
+      "technologies": [
+        "Scala",
+        "SBT",
+        "Consul",
+        "Redis",
+        "Finagle",
+        "Finatra",
+        "Gradle",
+        "ReactJS",
+        "Docker",
+        "MySQL",
+        "AWS",
+        "Kotlin",
+        "PostgreSQL",
+        "Spark"
+      ],
+      "tools": [
+        "IntelliJ",
+        "Jenkins",
+        "Consul",
+        "Docker Native"
+      ]
+    },
+    {
       "from": "May 2016",
       "to": "June 2018",
       "title": "Contributor, Swagger Codegen Core Team",
@@ -84,43 +122,6 @@
         "IntelliJ",
         "Docker",
         "GitHub"
-      ]
-    },
-    {
-      "from": "March 2016",
-      "to": "Present",
-      "title": "Senior Software Engineer",
-      "company": "Expedia, Inc.",
-      "location": "(remote - Richmond, VA)",
-      "bullets": [
-        "Participate in the design and construction of Microservices Architecture for new project(s)",
-        "Create reusable developer tools to increase developer productivity (sbt plugin, docker composed network)",
-        "Mentor Junior and Senior level developers on best practices, processes, and SOLID principles",
-        "Provide process improvement suggestions and strategies for new team construction",
-        "Lead refactoring efforts in database migration from MySQL to PostgreSQL",
-        "Team contribution to Spark Structured Streaming distributed data processing pipeline"
-      ],
-      "technologies": [
-        "Scala",
-        "SBT",
-        "Consul",
-        "Redis",
-        "Finagle",
-        "Finatra",
-        "Gradle",
-        "ReactJS",
-        "Docker",
-        "MySQL",
-        "AWS",
-        "Kotlin",
-        "PostgreSQL",
-        "Spark"
-      ],
-      "tools": [
-        "IntelliJ",
-        "Jenkins",
-        "Consul",
-        "Docker Native"
       ]
     },
     {
