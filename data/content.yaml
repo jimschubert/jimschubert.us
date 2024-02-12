@@ -1,0 +1,465 @@
+full_name: Jim Schubert
+phone:
+  home: ""
+  cell: 804-921-7331
+email: james.schubert@gmail.com
+title: Sr. Lead Software Engineer
+# Optional: use tagline to display alternate text under your name in sidebar
+#tagline: Sr. Lead Software Engineer
+meta_title: Jim Schubert, Sr. Lead Software Engineer
+meta_description: A well-rounded hands-on senior manager level engineer who has been coding since 1988.
+summary: |
+  I'm a hands-on Senior Lead Software Engineer who is interested in new technologies and innovative ideas.
+  Here are some things I bring to the table:
+  <ul class="list-styled">
+  <li>passion</li><li>quality</li><li>accuracy</li>
+  <li>code</li><li>humor</li><li>…food</li>
+  </ul>
+  I believe that the best code is a product of a fun environment and an amazing team.
+  <br/><br/>My colleagues and mentees alike always say they have learned a lot from my, especially as a result of my passion and patience.
+links:
+  - href: https://github.com/jimschubert
+    title: github/jimschubert
+    classes: github
+    fontawesome: fa-github
+  - href: http://github.com/jimschubert/jimschubert.us
+    title: This resume template
+    classes: github
+    fontawesome: fa-github
+  - href: http://bit.ly/JimSchubert-SO
+    title: StackOverflow Profile
+    classes: website
+    fontawesome: fa-stack-overflow
+#  - href: http://www.ipreferjim.com
+#    title: Development Blog
+#    classes: website
+#    fontawesome: fa-globe
+languages:
+  - name: English
+    proficiency: Native
+  - name: Russian
+    proficiency: Classroom
+interests:
+  - Coding
+  - Guitar
+  - Stencil Art
+  - Photography
+education:
+  - institution: Virginia Commonwealth University
+    location: Richmond, VA
+    degree: B.S. in Business
+    graduation_date: May 2009
+    major: Information Systems, Application Development
+    gpa: 3.98
+    honors:
+      - Academic Achievement Award, Spring/Fall 2006, Spring 2007
+      - William O. Edwards Scholarship for Merit, 2007-2008, 2008-2009
+      - Member, Beta Gamma Sigma International Business Honor Society, 2008
+      - Member, Phi Kappa Phi Honor Society, 2008
+      - Student of the Year Award, Information Systems, VCU School of Business, April 2009
+experience:
+  - from: June 2018
+    to: Present
+    title: Founding Member, OpenAPI Generator and OpenAPI Tools
+    company: Individual, Open Source
+    location: remote - Richmond, VA
+    bullets:
+      - Inactive since March 2020
+      - Help lead and maintain a community fork of Swagger Codegen
+      - Collaborate with OpenAPI Generator community
+      - Initial implementation of Gradle Plugin for OpenAPI Generator
+      - Ongoing investigation into process improvement (tooling, pipeline, publishing)
+    technologies:
+      - Java
+      - Maven
+      - C#
+      - ASP.NET Core
+      - TestNG
+      - Scala
+      - Kotlin
+      - Gradle
+    tools:
+      - IntelliJ
+      - Docker
+      - GitHub
+
+  - from: June 2016
+    to: March 2020
+    title: Contributor Swagger Codegen
+    company: Individual, Open Source
+    location: remote - Richmond, VA
+    bullets:
+      - Significant number of contributions to Swagger Codegen (later forked to OpenAPI Generator)
+    technologies:
+      - Java
+      - Maven
+      - C#
+      - ASP.NET Core
+      - TestNG
+      - Scala
+      - Kotlin
+      - Gradle
+    tools:
+      - IntelliJ
+      - Docker
+      - GitHub
+  - from: March 2016
+    to: June 2019
+    title: Senior Software Engineer
+    company: Expedia, Inc.
+    location: remote - Richmond, VA
+    bullets:
+      - Participated in the design and construction of Microservices Architecture for new project(s)
+      - Created reusable developer tools to increase developer productivity (sbt plugin, docker composed network)
+      - Mentored Junior and Senior level developers on best practices, processes, and SOLID principles
+      - Provided process improvement suggestions and strategies for new team construction
+      - Lead refactoring efforts in database migration from MySQL to PostgreSQL
+      - Lead multiple workstreams (Spark Pipeline/DevOps, new API development, legacy API management)
+      - Team contributed to Spark Structured Streaming distributed data processing pipeline
+    technologies:
+      - Scala
+      - SBT
+      - Consul
+      - Redis
+      - Finagle
+      - Finatra
+      - Gradle
+      - ReactJS
+      - Docker
+      - MySQL
+      - AWS
+      - Kotlin
+      - PostgreSQL
+      - Spark
+    tools:
+      - IntelliJ
+      - Jenkins
+      - Consul
+      - Docker Native
+  - from: May 2016
+    to: June 2018
+    title: Contributor, Swagger Codegen Core Team
+    company: Individual, Open Source
+    location: remote - Richmond, VA
+    bullets:
+      - Maintain C# client and ASP.NET Core server generators
+      - Collaborate with Swagger Codegen community via issues and pull requests
+      - Provided initial implementation of .swagger-codegen-ignore processing
+      - Bug fixes in areas oustide the reponsibilities of my generators (Maven Plugin)
+      - Contributed alpine-based Docker image, reducing image size from ~700MB to ~200MB
+      - Moderately sized refactoring efforts, requiring distributed coordination with core team and community
+      - Provided initial implementation of Kotlin client (Java/Android) and Kotlin server (ktor framework) generators
+      - Provided initial implementation of ASP.NET Core server generator
+      - Provided initial implementation of Scala server (Finch framework) generator
+    technologies:
+      - Java
+      - Maven
+      - C#
+      - ASP.NET Core
+      - TestNG
+      - Scala
+      - Kotlin
+    tools:
+      - IntelliJ
+      - Docker
+      - GitHub
+  - from: June 2014
+    to: March 2016
+    title: Senior Systems Analyst / Software Architect
+    company: Integrated Business Systems, Inc.
+    location: Richmond, VA
+    bullets:
+      - Mentored Junior and Senior level developers on best practices, processes, and SOLID principles
+      - Lead refactoring efforts of Business Intelligence product's presentation layer from tightly coupled and loosely organized MVC/jQuery to a Single Page Application with AngularJS and MVC as a RESTful API
+      - 'Designed and implemented a messaging and external processing framework on top of SQL Server Service Broker (External Activation) to offload numerous long-running processes from ASP.NET web applications (Message Bus). Implementations included: compiling and printing statements, payment processing, triggered database deployments, configuration'
+      - Integrated Hangfire for short, non-essential batch processing both in-proc in ASP.NET and as external self-hosted Windows services
+      - Helped design and lead refactoring efforts to introduce Inversion of Control into an existing multi-layered architecture, enabling the configuration-driven transfer of data through the same domain stack to multiple backend systems (i.e. Adapter Pattern for part of SqlCommand)
+      - Advocated automation testing and provided guidance on testing best practices to improve stability and maintainability of code
+      - Performed software construction and maintenance using ASP.NET MVC, AngularJS, Kendo UI, SQL Server 2008/2012
+      - Drove code quality through training, testing, and awareness
+      - Promoted reusable code via NuGet on an internally accessible repository
+      - Provided guidance in the conversion of my own test helpers into a shareable testing platform
+      - Advocated for process improvements within multiple Scrum teams
+    technologies:
+      - AngularJS
+      - ASP.NET
+      - .NET 3.5
+      - .NET 4.0
+      - .NET 4.5
+      - NUnit
+      - Windows Forms
+      - Web API 2
+      - SQL Server 2008
+      - SQL Server 2012
+      - SQL Server Service Broker
+      - Hangfire
+      - XML
+      - HTML
+      - CSS
+      - JavaScript
+      - MSBuild
+      - KendoUI
+    tools:
+      - Visual Studio
+      - TFS
+      - TFSVC
+  - from: January 2013
+    to: June 2014
+    title: Software Developer Engineer II
+    company: Expedia, Inc.
+    location: Bellevue, WA
+    bullets:
+      - Refactored node.js api which acts as a facade for other services
+      - Analyzed performance and memory of node.js/JavaScript
+      - Provided expertise of node.js framework and third-party modules to help implement a solid unit test and functional test bed
+      - Designed maintainable solutions for parameter validation within express.js application
+      - Created reusable, automatable utilities for maintenance of node.js application (e.g. generate swagger documentation from custom JSDoc comments)
+      - Improved bash scripts used for build and deployment; automatically verify and install dependencies before build, allow for multiple build profiles
+      - Helped with feature improvement and maintenance of now legacy PHP system (API and Frontend)
+      - Drove development and architecture of new REST API and UI using Scala, SBT, Scalatra, and AngularJS
+      - Mentored interns and newer developers
+      - Team master of using and teaching others git
+      - Interviewed numerous mid-level and senior-level candidates for the team
+      - Played a huge role in process improvement (git workflow, code review, peer programming, Scrum processes)
+    technologies:
+      - AngularJS
+      - node.js
+      - express.js
+      - MongoDB
+      - bash
+      - CentOS
+      - XML
+      - HTML
+      - CSS
+      - JavaScript
+      - Linux
+      - PHP
+      - Silex
+      - Wordpress
+      - Scala
+      - Scalatra
+      - MySQL
+      - knockout.js
+    tools:
+      - IntelliJ
+      - git
+      - npm
+      - AWS
+      - Jenkins
+      - Confluence
+      - GitHub
+      - Swagger
+      - SBT
+      - Jira Agile
+  - from: January 2012
+    to: January 2013
+    title: Software Engineer
+    company: Enghouse Interactive
+    location: remote - Richmond, VA
+    bullets:
+      - Member of development team for call center-centric telephony suite, CallRex
+      - Maintained and developed documentation and examples for CallRex SDK using Sandcastle for documentation and code written using C#, ASP.NET, Windows Forms
+      - Performed custom application development on a per customer basis using Windows Forms, ASP.NET, and WCF
+      - Created maintenance patches of legacy software using C++, particularly related to VoIP packet processing using SIP, SKINNY (SCCP), and RTP
+      - Created a unit-testing and functional-testing process to integrate into the build using MSBuild 4.0
+      - Created an MSBuild task wrapper around the VIX API to integrate build with VMware Virtual Machines and control full system installation, call bootstrapping (packet playback), and data verification as a means of integration and regression testing
+      - Performed analysis and review of customer support issues which generally involved log parsing, packet analysis using Wireshark, and occasionally analysis of Windows dump files
+      - Regularly interacted with customers to resolve issues and deploy custom applications or patches
+      - Provided an in-depth and expert-level knowledge of C# and ASP.NET in the design process for the conversion of legacy (native C++) code into managed code
+      - Discovered Unicode bug in sip packet header which could corrupt a Windows environment's unmanaged memory at kernel or user space
+    technologies:
+      - C++
+      - ASP.NET
+      - .NET 3.5
+      - Windows Forms
+      - Silverlight
+      - WCF
+      - MSTest
+      - SQL Server 2008
+      - DB2
+      - XML
+      - HTML
+      - CSS
+      - JavaScript
+      - Linux
+      - MSBuild
+    tools:
+      - Visual Studio
+      - Subversion
+      - Wireshark
+      - Sandcastle
+      - VMWare
+  - from: April 2011
+    to: January 2012
+    title: Senior Software Engineer (C#/ASP.NET)
+    company: Primescape Solutions, Inc.
+    location: Herndon, VA
+    bullets:
+      - Designed and development of software and web applications using Microsoft .NET 3.5 Framework
+      - Created custom, reusable controls and frameworks for reporting on large data sets
+      - Owned configuration, setup, and maintenance of collaborative Drupal CMS for global client organization
+      - 'DevOps: Linux system administration on dedicated server hosting Drupal CMS'
+    technologies:
+      - ASP.NET
+      - .NET 3.5
+      - Oracle 9i
+      - NUnit
+      - MySQL
+      - PostgresQL
+      - XML
+      - HTML
+      - CSS
+      - JavaScript
+      - Linux
+      - CentOS
+      - Drupal
+    tools:
+      - Visual Studio
+      - Subversion
+      - Toad
+  - from: October 2010
+    to: April 2011
+    title: Software Developer Engineer II
+    company: Expedia, Inc.
+    location: Bellevue, WA
+    bullets:
+      - Instrumental in the interview process for Senior .NET Software Developer Engineers
+      - 'Researched available technology solutions in a variety of areas: localization, performance monitoring, logging'
+      - 'Team: prepared a demonstration application using ASP.NET MVC 2.0 (Web Forms View Engine)'
+      - 'Team: scalable, high-availability public-facing web application using ASP.NET MVC 3.0 (Razor View Engine)'
+      - Involved in a majority of the construction phase for B2B site
+      - Researched and implemented automated UI end-to-end testing using Gallio/MbUnit
+    technologies:
+      - ASP.NET
+      - .NET 3.5
+      - SQL Server 2008
+      - Gallio/MbUnit
+      - XML
+      - HTML
+      - CSS
+      - JavaScript
+      - MSBuild
+    tools:
+      - Visual Studio
+      - Perforce
+      - Confluence
+  - from: September 2009
+    to: November 2010
+    title: Consultant / Software & Web Application Developer
+    company: Primescape Solutions, Inc.
+    location: Herndon, VA
+    bullets:
+      - Performed major enhancements and added functionality to a grants/budget management web application using ASP.NET/C# and Oracle 9i
+      - Upgraded the grants/budget management web application from .NET 1.1 to .NET 3.5 SP1
+      - Complied with coding and security standards for Federal Government client
+      - Designed and developed application architecture and data access components
+      - Interacted directly with Federal Government clients
+      - Involved in entire Software Development Lifecycle
+    technologies:
+      - ASP.NET
+      - .NET 1.1
+      - .NET 3.5
+      - Oracle 9i
+      - XML
+      - HTML
+      - CSS
+      - JavaScript
+    tools:
+      - Visual Studio
+      - Visual Source Safe
+      - Toad
+  - from: September 2008
+    to: February 2009
+    title: Intern - Software Developer
+    company: Agility Healthcare Solutions (GE Healthcare)
+    location: Richmond, VA
+    bullets:
+      - Performed bug fixes and application enhancements in an HL7-compliant Rich Internet Application using ASP.NET 3.5 and C#
+      - Worked with development team as part of a mixed Agile and Scrum methodology
+      - Provided feedback on application complexity and usability to team leader
+      - Evaluated build process using CruiseControl.NET, MSBuild, Windows Installer XML Toolset (WiX)
+    technologies:
+      - ASP.NET
+      - .NET 3.5
+      - SQL Server 2005
+      - Silverlight
+      - XML
+      - HTML
+      - CSS
+      - JavaScript
+      - MSBuild
+      - WiX
+    tools:
+      - Visual Studio
+      - Subversion
+projects:
+  summary: |
+    I have been active in Open Source officially since 2008, although I dabbled in coding for 20 years before this.
+    College awoke an interest in me to share my code and creations with others.
+  list:
+    - href: https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna
+      title: New Tab Redirect!
+      description: A Google Chrome extension which allows the user to override the browser's new tab page.
+    - href: https://github.com/jimschubert/changelog
+      title: jimschubert/changelog
+      description: A CLI written in Go which allows for customizable changelog generation from local or remote (GitHub) repositories.
+    - href: https://github.com/jimschubert/answer
+      title: jimschubert/answer
+      description: A Go module providing "bubbles" (bubbletea models) which provide terminal interface functionality to replace the deprecated github.com/AlecAivazis/survey.
+    - href: https://github.com/jimschubert/intellij-openapi-generator
+      title: OpenAPI Generator Plugin
+      description: An extension for Jetbrains based IDEs which provides a GUI wrapper around OpenAPI Generator.
+written:
+  - url: https://yourfirstapp.us/
+    title: '''Your First App: Node.js'' by Jim Schubert'
+    summary: I self published this book about the development life cycle of a full-stack node.js application, using Express/Angular/MongoDB.
+  - url: https://www.packtpub.com/web-development/deploying-nodejs
+    title: '''Deploying Node.js'' by Sandro Pasquali'
+    summary: I was a technical reviewer for this book, which focused on the building, testing, deploying, monitoring, and maintenance of node.js applications.
+skills:
+    - name: OpenAPI Generator
+      rank: 100
+    - name: Go ("Golang")
+      rank: 95
+    - name: Java
+      rank: 95
+    - name: Docker
+      rank: 90
+    - name: node.js
+      rank: 90
+    - name: JavaScript
+      rank: 98
+    - name: REST API
+      rank: 90
+    - name: Jetbrains IDEs
+      rank: 88
+    - name: Shell Scripting
+      rank: 85
+    - name: RDMS
+      rank: 80
+    - name: Scala
+      rank: 85
+    - name: Kotlin
+      rank: 80
+    - name: Groovy
+      rank: 75
+    - name: Python
+      rank: 75
+    - name: Visual C++
+      rank: 40
+    - name: XML/XSL
+      rank: 55
+    - name: C#/.NET
+      rank: 80
+    - name: Wireshark
+      rank: 45
+    - name: Consul
+      rank: 55
+    - name: Build (Maven/Gradle)
+      rank: 75
+    - name: HTML/XHTML & CSS
+      rank: 90
+    - name: SQLite3
+      rank: 60
+    - name: VERY (persistent)
+      rank: 100

@@ -1,0 +1,19 @@
+# https://github.com/gohugoio/hugoThemes#themetoml
+name = "Jim Schubert's Resume Template"
+license = "MIT"
+licenselink = "https://github.com/jimschubert/jimschubert-resume/master/LICENSE"
+description = "A Hugo theme built around Xiaoying Riley's free Orbits theme."
+homepage = "https://github.com/jimschubert/jimschubert-resume"
+tags = ["minimal", "resume"]
+features = ["minimal", "resume", "theme", "orbits"]
+min_version = "0.122.0"
+
+[author]
+name = "Jim Schubert"
+homepage = "https://github.com/jimschubert"
+
+# If porting an existing theme
+[original]
+author = "Xiaoying Riley"
+homepage = "http://themes.3rdwavemedia.com"
+repo = "https://github.com/xriley/Orbit-Theme"

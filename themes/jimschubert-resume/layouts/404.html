@@ -1,0 +1,25 @@
+{{ $data := or (index .Site.Data .Site.Language.Lang).content .Site.Data.content }}
+{{ .Scratch.Set "data" $data }}
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+<body>
+<div class="wrapper mt-lg-5">
+    <div class="lost-wrapper">
+        {{ $image := resources.GetMatch "images/astronaut.jpg" }}
+        {{ with $image }}
+        {{ $image := $image.Resize "200x200" }}
+        <img src="{{ $image.RelPermalink }}" alt="Lost Astronaut" class="rounded-circle">
+        {{ end }}
+    </div>
+    <div class="main-wrapper">
+    <h1>404 <i class="fa-solid fa-person-circle-question"></i></h1>
+    <p class="bg-warning lead">Oops! Looks like you took a wrong turn.</p>
+
+    <p>Either this page doesn't exist or you're lost in the vastness of <strong>cyberspace</strong>.</p>
+
+    <p>Don't worry, just hit the back button or try navigating to the <a href="/">home page</a>.</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+title: Jim Schubert
+baseURL: https://example.org/
+languageCode: en-us
+defaultContentLanguage: en
+theme: 'jimschubert-resume'
+
+# https://gohugo.io/templates/robots/
+enableRobotsTXT: true
+enableEmoji: true
+disableKinds: ["page", "section", "taxonomy", "term", "RSS", "sitemap"]
+
+params:
+  educationMain: true
