@@ -58,6 +58,25 @@ education:
       - Member, Phi Kappa Phi Honor Society, 2008
       - Student of the Year Award, Information Systems, VCU School of Business, April 2009
 experience:
+
+  - from: June 2019
+    to: Present
+    title: Sr. Lead Software Engineer
+    company: Redacted (security reasons)
+    location: Richmond, VA
+    bullets:
+      - Contact me for details. My current (Fintech) employer information is omitted for personal security.
+    technologies:
+      - Java
+      - Maven
+      - Go
+      - Groovy
+      - Python
+      - Terraform
+    tools:
+      - IntelliJ
+      - Docker
+      - GitHub
   - from: June 2018
     to: Present
     title: Founding Member, OpenAPI Generator and OpenAPI Tools
