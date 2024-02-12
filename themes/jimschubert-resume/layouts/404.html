@@ -6,10 +6,12 @@
 <body>
 <div class="wrapper mt-lg-5">
     <div class="lost-wrapper">
-        {{ $image := resources.GetMatch "images/astronaut.jpg" }}
+        {{ $image := resources.GetMatch "images/404.png" }}
         {{ with $image }}
         {{ $image := $image.Resize "200x200" }}
-        <img src="{{ $image.RelPermalink }}" alt="Lost Astronaut" class="rounded-circle">
+        <img src="{{ $image.RelPermalink }}" alt="Are you lost?" class="rounded-circle">
+        {{ else }}
+        <img src="img/404.png" alt="Are you lost?" class="rounded-circle">
         {{ end }}
     </div>
     <div class="main-wrapper">

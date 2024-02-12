@@ -11,6 +11,8 @@
             {{ with $image }}
             {{ $image := $image.Resize "100x100" }}
             <img class="profile rounded-circle" src="{{ $image.RelPermalink }}" alt="profile photo" />
+            {{ else }}
+            <img class="profile rounded-circle" src="img/profile.png" alt="profile photo default (replace me)" />
             {{ end }}
             <h1 class="name">{{$data.full_name}}</h1>
             <h3 class="tagline">{{or $data.tagline $data.title}}</h3>
