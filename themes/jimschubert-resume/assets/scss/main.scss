@@ -14,5 +14,9 @@ $darker-grey: {{ .Site.Params.darkerGrey | default "#666"}} !default;
 $smoky-white: {{ .Site.Params.smokyWhite | default "#f5f5f5"}} !default;
 $sidebar-padding: {{ .Site.Params.sidebarPadding | default "20px"}} !default;
 
-@import "orbit.scss";
+// original
+@import "orbit";
+// adjustments from original
+@import "modifications";
+// allow extension
 @import "custom";

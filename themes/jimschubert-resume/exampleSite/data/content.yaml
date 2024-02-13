@@ -1,0 +1,130 @@
+full_name: John Doe
+phone:
+  home: ""
+  cell: 000-000-0000
+email: example@example.com
+title: Sr. Lead Software Engineer
+# Optional: use tagline to display alternate text under your name in sidebar
+#tagline: Lead Software Engineer
+meta_title: Your Name, Software Engineer
+meta_description: A Hugo template created by Jim Schubert, based on the free Orbit theme by Xiaoying Riley.
+summary: |
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+  Condimentum lacinia quis vel eros donec. Sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae. Orci sagittis eu 
+  volutpat odio facilisis mauris. Rhoncus mattis rhoncus urna neque viverra justo nec.
+  
+  Vulputate odio ut enim blandit volutpat maecenas. Massa vitae tortor condimentum lacinia. Proin nibh nisl condimentum 
+  id venenatis a condimentum vitae. Quam pellentesque nec nam aliquam sem et tortor. Sed adipiscing diam donec adipiscing 
+  tristique. Cras adipiscing enim eu turpis egestas pretium. In nibh mauris cursus mattis molestie. Neque ornare aenean 
+  euismod elementum nisi quis eleifend. Est placerat in egestas erat imperdiet.
+links:
+  - href: https://github.com/jimschubert
+    title: github/jimschubert
+    classes: github
+    fontawesome: fa-github
+  - href: http://github.com/jimschubert/jimschubert.us
+    title: This resume template
+    classes: github
+    fontawesome: fa-github
+languages:
+  - name: English
+    proficiency: Native
+  - name: Bri'ish English
+    proficiency: Classroom
+interests:
+  - Coding
+  - Coding
+  - Coding
+  - Coding
+education:
+  - institution: Generic University
+    location: Anywhere, USA
+    degree: B.S. in Awesome
+    graduation_date: May 2009
+    major: a cras semper
+    gpa: 4.0
+    honors:
+      - mauris in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id aliquet risus
+experience:
+  - from: June 2019
+    to: Present
+    title: Sr. Lead Software Engineer
+    company: ACME, inc.
+    location: Anywhere, USA
+    bullets:
+      - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      - Pellentesque habitant morbi tristique senectus et netus.
+      - Amet tellus cras adipiscing enim.
+      - Cras sed felis eget velit aliquet sagittis id.
+      - Ac odio tempor orci dapibus.
+      - Nec tincidunt praesent semper feugiat nibh.
+      - Blandit cursus risus at ultrices mi tempus imperdiet nulla.
+    # not used in default templates
+    technologies:
+      - Java
+      - Maven
+      - Go
+      - Groovy
+      - Python
+      - Terraform
+    # not used in default templates
+    tools:
+      - IntelliJ
+      - Docker
+      - GitHub
+      - Visual Studio Code
+
+  - from: Jan 2015
+    to: June 2019
+    title: Lead Software Engineer
+    company: ACME, inc.
+    location: Anywhere, USA
+    bullets:
+      - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      - Pellentesque habitant morbi tristique senectus et netus.
+      - Amet tellus cras adipiscing enim.
+      - Cras sed felis eget velit aliquet sagittis id.
+      - Ac odio tempor orci dapibus.
+      - Nec tincidunt praesent semper feugiat nibh.
+      - Blandit cursus risus at ultrices mi tempus imperdiet nulla.
+    # not used in default templates
+    technologies:
+      - Java
+      - Maven
+    # not used in default templates
+    tools:
+      - IntelliJ
+
+projects:
+  summary: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    
+    Pellentesque habitant morbi tristique senectus et netus. Amet tellus cras adipiscing enim. Cras sed felis eget velit aliquet sagittis id.
+    
+    Ac odio tempor orci dapibus. Nec tincidunt praesent semper feugiat nibh. Blandit cursus risus at ultrices mi tempus imperdiet nulla.
+  list:
+    - href: https://github.com/jimschubert/changelog
+      title: jimschubert/changelog
+      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    - href: https://github.com/jimschubert/answer
+      title: jimschubert/answer
+      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+written:
+  - url: https://example.com/
+    title: An example written work
+    summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  - url: https://example.com/
+    title: Another example written work
+    summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+skills:
+  - name: Go ("Golang")
+    rank: 58
+  - name: Java
+    rank: 75
+  - name: Docker
+    rank: 10
+  - name: node.js
+    rank: 45
+  - name: JavaScript
+    rank: 25
