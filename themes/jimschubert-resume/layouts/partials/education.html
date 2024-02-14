@@ -1,0 +1,32 @@
+{{- if .Params.educationMain -}}
+<section class="section education-section">
+    <h2 class="section-title"><span class="fa-stack fa-xs"><i class="fas fa-circle fa-stack-2x"></i><i class="fas fa-school fa-stack-1x fa-inverse"></i></span>
+        Education
+    </h2>
+    {{- range $education := .Resume.education -}}
+    <div class="item">
+        <div class="meta">
+            <div class="upper-row">
+                <h3 class="job-title">{{ $education.institution  | markdownify | safeHTML}}</h3>
+                <div class="time">{{ or $education.graduation_date $education.dates  | markdownify | safeHTML }}</div>
+            </div><!--//upper-row-->
+            <div class="company">{{ $education.degree  | markdownify | safeHTML}} {{ $education.major | markdownify | safeHTML}}</div>
+        </div><!--//meta-->
+    </div><!--//item-->
+    {{- with $education.honors -}}
+    <div class="item">
+        <div class="meta">
+            <div class="upper-row">
+                Honors
+            </div>
+            <ul class="list-styled honors-list">
+                {{- range $honor := $education.honors -}}
+                <li>{{ . | markdownify | safeHTML}}</li>
+                {{- end -}}
+            </ul><!--//details-->
+        </div>
+    </div>
+    {{- end -}}
+    {{- end -}}
+</section><!--//section-->
+{{- end -}}

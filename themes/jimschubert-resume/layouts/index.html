@@ -1,179 +1,24 @@
 {{ $data := or (index .Site.Data .Site.Language.Lang).content .Site.Data.content }}
-{{ .Scratch.Set "data" $data }}
 <!DOCTYPE html>
 <html lang="en">
-{{ partial "head.html" . }}
+{{ partial "head.html" (dict "Title" (or $data.meta_title .Site.Title) "Description" $data.meta_description ) }}
 <body>
 <div class="wrapper mt-lg-5">
     <div class="sidebar-wrapper">
-        <div class="profile-container">
-            {{ $image := resources.GetMatch "images/profile.png" }}
-            {{ with $image }}
-            {{ $image := $image.Resize "100x100" }}
-            <img class="profile rounded-circle" src="{{ $image.RelPermalink }}" alt="profile photo" />
-            {{ else }}
-            <img class="profile rounded-circle" src="img/profile.png" alt="profile photo default (replace me)" />
-            {{ end }}
-            <h1 class="name">{{$data.full_name}}</h1>
-            <h3 class="tagline">{{or $data.tagline $data.title}}</h3>
-        </div><!--//profile-container-->
-        <div class="contact-container container-block">
-            <ul class="list-unstyled contact-list">
-                {{ with $data.email }}
-                <li class="email"><i class="fas fa-envelope"></i><a href="mailto:{{.}}">{{.}}</a></li>
-                {{ end }}
-                {{ with $phone := $data.phone }}
-                {{ with $phone.home }}<li class="phone"><i class="fas fa-phone"></i><a href="tel:{{ $phone.home }}">{{ $phone.home }} (H)</a></li>{{ end }}
-                {{ with $phone.cell }}<li class="phone"><i class="fas fa-phone"></i><a href="tel:{{ $phone.cell }}">{{ $phone.cell }} (C)</a></li>{{ end }}
-                {{ end }}
-                {{ range $data.links }}
-                <li class="{{ .classes }}"><i class="fas fa-brands {{ .fontawesome }}"></i><a href="{{ .href }}" target="_blank">{{ .title }}</a></li>
-                {{ end }}
-            </ul>
-        </div><!--//contact-container-->
-
-        <div class="education-container container-block">
-            <h2 class="container-block-title">Education</h2>
-            {{ range $education := $data.education }}
-            <div class="item">
-                <h4 class="degree">{{ $education.degree }}</h4>
-                <h5 class="meta">{{ $education.institution }}</h5>
-                <h5 class="meta gpa">{{ $education.gpa }} GPA</h5>
-                <div class="time">{{ or $education.graduation_date $education.dates }}</div>
-            </div><!--//item-->
-            {{ end }}
-        </div><!--//education-container-->
-
-        {{ if $data.languages }}
-        <div class="languages-container container-block">
-            <h2 class="container-block-title">Languages</h2>
-            <ul class="list-unstyled interests-list">
-                {{ range $language := $data.languages }}
-                <li>{{ $language.name }}{{ with $language.proficiency }}<span class="lang-desc"> ({{ . }})</span>{{ end }}</li>
-                {{ end }}
-            </ul>
-        </div><!--//interests-->
-        {{ end }}
-
-        {{ if $data.interests }}
-        <div class="interests-container container-block">
-            <h2 class="container-block-title">Interests</h2>
-            <ul class="list-unstyled interests-list">
-                {{ range $data.interests }}
-                <li>{{ . }}</li>
-                {{ end }}
-            </ul>
-        </div><!--//interests-->
-        {{ end }}
-
+        {{ partial "side-profile" (dict "Resume" $data "Params" .Site.Params) }}
+        {{ partial "side-contact"  (dict "Resume" $data "Params" .Site.Params) }}
+        {{ partial "side-education" (dict "Resume" $data "Params" .Site.Params) }}
+        {{ partial "side-languages" (dict "Resume" $data "Params" .Site.Params) }}
+        {{ partial "side-interests" (dict "Resume" $data "Params" .Site.Params) }}
     </div><!--//sidebar-wrapper-->
 
     <div class="main-wrapper">
-
-        <section class="section summary-section">
-            <h2 class="section-title"><span class="fa-stack fa-xs"><i class="fas fa-circle fa-stack-2x"></i><i class="fas fa-user fa-stack-1x fa-inverse"></i></span>Career Profile</h2>
-            <div class="summary">
-                <p>{{$data.summary | safeHTML}}</p>
-            </div><!--//summary-->
-        </section><!--//section-->
-
-
-        {{ if .Site.Params.educationMain }}
-        <section class="section education-section">
-            <h2 class="section-title"><span class="fa-stack fa-xs"><i class="fas fa-circle fa-stack-2x"></i><i class="fas fa-school fa-stack-1x fa-inverse"></i></span>Education</h2>
-            {{ range $education := $data.education }}
-            <div class="item">
-                <div class="meta">
-                    <div class="upper-row">
-                        <h3 class="job-title">{{ $education.institution }}</h3>
-                        <div class="time">{{ or $education.graduation_date $education.dates }}</div>
-                    </div><!--//upper-row-->
-                    <div class="company">{{ $education.degree}} {{ $education.major}}</div>
-                </div><!--//meta-->
-            </div><!--//item-->
-            {{ with $education.honors }}
-            <div class="item">
-                <div class="meta">
-                    <div class="upper-row">
-                        Honors
-                    </div>
-                    <ul class="list-styled honors-list">
-                    {{ range $honor := $education.honors }}
-                        <li>{{ . }}</li>
-                    {{ end }}
-                    </ul><!--//details-->
-                </div>
-            </div>
-            {{ end }}
-            {{ end }}
-        </section><!--//section-->
-        {{ end }}
-
-        {{ $experience := $data.experience }}
-        {{ with $experience }}
-        <section class="section experiences-section">
-            <h2 class="section-title">
-                <span class="fa-stack fa-xs"><i class="fas fa-circle fa-stack-2x"></i><i class="fas fa-briefcase fa-stack-1x fa-inverse"></i></span>Experiences</h2>
-
-            {{ range $item := . }}
-            <div class="item">
-                <div class="meta">
-                    <div class="upper-row">
-                        <h3 class="job-title">{{ $item.title }}</h3>
-                        <div class="time">{{ $item.from }}{{ if $item.to }}{{ if $item.from }} - {{end }}{{ $item.to }}{{ end }}</div>
-                    </div><!--//upper-row-->
-                    <div class="company">{{ $item.company }} <span class="right">{{ $item.location }}</span></div>
-                </div><!--//meta-->
-                {{ with $item.long }}
-                <div class="details">
-                    {{ . | safeHTML }}
-                </div><!--//details-->
-                {{ end }}
-                {{ with $item.bullets }}
-                <ul class="list-styled">
-                    {{ range $bullet := . }}
-                    <li>{{ $bullet | safeHTML}}</li>
-                    {{ end }}
-                </ul>
-                {{ end }}
-            </div><!--//item-->
-            {{ end }}
-        </section><!--//section-->
-        {{ end }}
-
-        {{ with $data.projects }}
-        <section class="section projects-section">
-            <h2 class="section-title"><span class="fa-stack fa-xs"><i class="fas fa-circle fa-stack-2x"></i><i class="fas fa-archive fa-stack-1x fa-inverse"></i></span>Projects</h2>
-            <div class="intro">
-                <p>{{ .summary }}</p>
-            </div><!--//intro-->
-            {{ range $project := .list }}
-            <div class="item">
-                <span class="project-title"><a href="{{ .href }}" target="_blank">{{ .title }}</a></span>
-                <span class="project-tagline">{{ .description }}</span>
-            </div><!--//item-->
-            {{ end }}
-
-        </section><!--//section-->
-        {{ end }}
-
-        {{ with $data.skills }}
-        <section class="skills-section section">
-            <h2 class="section-title"><span class="fa-stack fa-xs"><i class="fas fa-circle fa-stack-2x"></i><i class="fas fa-rocket fa-stack-1x fa-inverse"></i></span>Skills &amp; Proficiency</h2>
-
-            {{ range $skill := . }}
-            <div class="skillset">
-                <div class="item">
-                    <h3 class="level-title">{{ $skill.name }}</h3>
-                    <div class="progress level-bar">
-                        <div class="progress-bar theme-progress-bar" role="progressbar" style="width: {{ $skill.rank }}%" aria-valuenow="{{ $skill.rank }}" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div><!--//item-->
-            </div>
-            {{ end }}
-        </section><!--//skills-section-->
-        {{ end }}
-
+        {{ partial "summary" (dict "Resume" $data "Params" .Site.Params) }}
+        {{ partial "education" (dict "Resume" $data "Params" .Site.Params) }}
+        {{ partial "experience" (dict "Resume" $data "Params" .Site.Params) }}
+        {{ partial "projects" (dict "Resume" $data "Params" .Site.Params) }}
+        {{ partial "publications" (dict "Resume" $data "Params" .Site.Params) }}
+        {{ partial "skills" (dict "Resume" $data "Params" .Site.Params) }}
     </div><!--//main-body-->
 </div>
 

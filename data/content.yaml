@@ -11,12 +11,17 @@ meta_description: A well-rounded hands-on senior manager level engineer who has 
 summary: |
   I'm a hands-on Senior Lead Software Engineer who is interested in new technologies and innovative ideas.
   Here are some things I bring to the table:
-  <ul class="list-styled">
-  <li>passion</li><li>quality</li><li>accuracy</li>
-  <li>code</li><li>humor</li><li>…food</li>
-  </ul>
+  
+  * passion
+  * quality
+  * accuracy
+  * code
+  * humor
+  * …food
+  
   I believe that the best code is a product of a fun environment and an amazing team.
-  <br/><br/>My colleagues and mentees alike always say they have learned a lot from my, especially as a result of my passion and patience.
+  
+  My colleagues and mentees alike always say they have learned a lot from my, especially as a result of my passion and patience.
 links:
   - href: https://github.com/jimschubert
     title: github/jimschubert
@@ -36,9 +41,10 @@ links:
 #    fontawesome: fa-globe
 languages:
   - name: English
-    proficiency: Native
+    # These support markdown, so italicise proficiency
+    proficiency: '*Native*'
   - name: Russian
-    proficiency: Classroom
+    proficiency: '*Classroom*'
 interests:
   - Coding
   - Guitar
@@ -46,10 +52,10 @@ interests:
   - Photography
 education:
   - institution: Virginia Commonwealth University
-    location: Richmond, VA
+    location: _Richmond, VA_
     degree: B.S. in Information Systems
     graduation_date: May 2009
-    major: Application Development (Info Sys)
+    major: '**Application Development**'
     gpa: 3.98
     honors:
       - Academic Achievement Award, Spring/Fall 2006, Spring 2007
@@ -63,9 +69,9 @@ experience:
     to: Present
     title: Sr. Lead Software Engineer
     company: Redacted (security reasons)
-    location: Richmond, VA
+    location: _Richmond, VA_
     bullets:
-      - Contact me for details. My current (Fintech) employer information is omitted for personal security.
+      - Contact me for details. My current (fintech) employer information is omitted for personal security.
     technologies:
       - Java
       - Maven
@@ -81,7 +87,7 @@ experience:
     to: Present
     title: Founding Member, OpenAPI Generator and OpenAPI Tools
     company: Individual, Open Source
-    location: remote - Richmond, VA
+    location: _remote - Richmond, VA_
     bullets:
       - Inactive since March 2020
       - Help lead and maintain a community fork of Swagger Codegen
@@ -106,7 +112,7 @@ experience:
     to: March 2020
     title: Contributor Swagger Codegen
     company: Individual, Open Source
-    location: remote - Richmond, VA
+    location: _remote - Richmond, VA_
     bullets:
       - Significant number of contributions to Swagger Codegen (later forked to OpenAPI Generator)
     technologies:
@@ -126,7 +132,7 @@ experience:
     to: June 2019
     title: Senior Software Engineer
     company: Expedia, Inc.
-    location: remote - Richmond, VA
+    location: _remote - Richmond, VA_
     bullets:
       - Participated in the design and construction of Microservices Architecture for new project(s)
       - Created reusable developer tools to increase developer productivity (sbt plugin, docker composed network)
@@ -159,12 +165,12 @@ experience:
     to: June 2018
     title: Contributor, Swagger Codegen Core Team
     company: Individual, Open Source
-    location: remote - Richmond, VA
+    location: _remote - Richmond, VA_
     bullets:
       - Maintain C# client and ASP.NET Core server generators
       - Collaborate with Swagger Codegen community via issues and pull requests
       - Provided initial implementation of .swagger-codegen-ignore processing
-      - Bug fixes in areas oustide the reponsibilities of my generators (Maven Plugin)
+      - Bug fixes in areas outside the responsibilities of my generators (Maven Plugin)
       - Contributed alpine-based Docker image, reducing image size from ~700MB to ~200MB
       - Moderately sized refactoring efforts, requiring distributed coordination with core team and community
       - Provided initial implementation of Kotlin client (Java/Android) and Kotlin server (ktor framework) generators
@@ -186,7 +192,7 @@ experience:
     to: March 2016
     title: Senior Systems Analyst / Software Architect
     company: Integrated Business Systems, Inc.
-    location: Richmond, VA
+    location: _Richmond, VA_
     bullets:
       - Mentored Junior and Senior level developers on best practices, processes, and SOLID principles
       - Lead refactoring efforts of Business Intelligence product's presentation layer from tightly coupled and loosely organized MVC/jQuery to a Single Page Application with AngularJS and MVC as a RESTful API
@@ -226,13 +232,13 @@ experience:
     to: June 2014
     title: Software Developer Engineer II
     company: Expedia, Inc.
-    location: Bellevue, WA
+    location: _Bellevue, WA_
     bullets:
       - Refactored node.js api which acts as a facade for other services
       - Analyzed performance and memory of node.js/JavaScript
       - Provided expertise of node.js framework and third-party modules to help implement a solid unit test and functional test bed
       - Designed maintainable solutions for parameter validation within express.js application
-      - Created reusable, automatable utilities for maintenance of node.js application (e.g. generate swagger documentation from custom JSDoc comments)
+      - Created reusable automation utilities for maintenance of node.js application (e.g. generate swagger documentation from custom JSDoc comments)
       - Improved bash scripts used for build and deployment; automatically verify and install dependencies before build, allow for multiple build profiles
       - Helped with feature improvement and maintenance of now legacy PHP system (API and Frontend)
       - Drove development and architecture of new REST API and UI using Scala, SBT, Scalatra, and AngularJS
@@ -274,7 +280,7 @@ experience:
     to: January 2013
     title: Software Engineer
     company: Enghouse Interactive
-    location: remote - Richmond, VA
+    location: _remote - Richmond, VA_
     bullets:
       - Member of development team for call center-centric telephony suite, CallRex
       - Maintained and developed documentation and examples for CallRex SDK using Sandcastle for documentation and code written using C#, ASP.NET, Windows Forms
@@ -312,7 +318,7 @@ experience:
     to: January 2012
     title: Senior Software Engineer (C#/ASP.NET)
     company: Primescape Solutions, Inc.
-    location: Herndon, VA
+    location: _Herndon, VA_
     bullets:
       - Designed and development of software and web applications using Microsoft .NET 3.5 Framework
       - Created custom, reusable controls and frameworks for reporting on large data sets
@@ -340,7 +346,7 @@ experience:
     to: April 2011
     title: Software Developer Engineer II
     company: Expedia, Inc.
-    location: Bellevue, WA
+    location: _Bellevue, WA_
     bullets:
       - Instrumental in the interview process for Senior .NET Software Developer Engineers
       - 'Researched available technology solutions in a variety of areas: localization, performance monitoring, logging'
@@ -366,7 +372,7 @@ experience:
     to: November 2010
     title: Consultant / Software & Web Application Developer
     company: Primescape Solutions, Inc.
-    location: Herndon, VA
+    location: _Herndon, VA_
     bullets:
       - Performed major enhancements and added functionality to a grants/budget management web application using ASP.NET/C# and Oracle 9i
       - Upgraded the grants/budget management web application from .NET 1.1 to .NET 3.5 SP1
@@ -391,7 +397,7 @@ experience:
     to: February 2009
     title: Intern - Software Developer
     company: Agility Healthcare Solutions (GE Healthcare)
-    location: Richmond, VA
+    location: _Richmond, VA_
     bullets:
       - Performed bug fixes and application enhancements in an HL7-compliant Rich Internet Application using ASP.NET 3.5 and C#
       - Worked with development team as part of a mixed Agile and Scrum methodology
@@ -413,7 +419,7 @@ experience:
       - Subversion
 projects:
   summary: |
-    I have been active in Open Source officially since 2008, although I dabbled in coding for 20 years before this.
+    I have been active in Open Source officially since 2008, although I dabbled in coding for 20 years before that.
     College awoke an interest in me to share my code and creations with others.
   list:
     - href: https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna
@@ -421,21 +427,27 @@ projects:
       description: A Google Chrome extension which allows the user to override the browser's new tab page.
     - href: https://github.com/jimschubert/changelog
       title: jimschubert/changelog
-      description: A CLI written in Go which allows for customizable changelog generation from local or remote (GitHub) repositories.
+      description: |
+        A CLI written in Go which allows for customizable changelog generation from local or remote (GitHub) repositories.
+        I also distribute this tool as a GitHub Action called [beast-changelog](https://github.com/marketplace/actions/beast-changelog).
     - href: https://github.com/jimschubert/answer
       title: jimschubert/answer
       description: A Go module providing "bubbles" (bubbletea models) which provide terminal interface functionality to replace the deprecated github.com/AlecAivazis/survey.
     - href: https://github.com/jimschubert/intellij-openapi-generator
       title: OpenAPI Generator Plugin
       description: An extension for Jetbrains based IDEs which provides a GUI wrapper around OpenAPI Generator.
-written:
-  - url: https://yourfirstapp.us/
-    title: '''Your First App: Node.js'' by Jim Schubert'
-    summary: I self published this book about the development life cycle of a full-stack node.js application, using Express/Angular/MongoDB.
-  - url: https://www.packtpub.com/web-development/deploying-nodejs
-    title: '''Deploying Node.js'' by Sandro Pasquali'
-    summary: I was a technical reviewer for this book, which focused on the building, testing, deploying, monitoring, and maintenance of node.js applications.
+publications:
+  summary: I extend my dedication to developer productivity into writing and performing technical reviews of written works.
+  list:
+    - href: https://jimschubert.gumroad.com/l/Ifhbf
+      title: '**Your First App: Node.js** by Jim Schubert'
+      description: I self published this book about the development life cycle of a full-stack node.js application, using Express/Angular/MongoDB.
+    - href: https://www.packtpub.com/product/deploying-nodejs/9781783981403
+      title: '**Deploying Node.js** by Sandro Pasquali'
+      description: I was a technical reviewer for this book, which focused on the building, testing, deploying, monitoring, and maintenance of node.js applications.
 skills:
+  summary: ''
+  list:
     - name: OpenAPI Generator
       rank: 100
     - name: Go ("Golang")

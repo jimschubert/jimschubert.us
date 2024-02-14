@@ -1,0 +1,16 @@
+{{- with .Resume.projects -}}
+<section class="section projects-section">
+    <h2 class="section-title"><span class="fa-stack fa-xs"><i class="fas fa-circle fa-stack-2x"></i><i class="fas fa-archive fa-stack-1x fa-inverse"></i></span>Projects</h2>
+    {{- if .summary -}}
+    <div class="intro">
+        <p>{{ .summary | markdownify | safeHTML}}</p>
+    </div><!--//intro-->
+    {{- end -}}
+    {{- range $project := .list -}}
+    <div class="item">
+        <span class="project-title"><a href="{{ .href }}" target="_blank">{{ .title  | markdownify | safeHTML}}</a></span>
+        <span class="project-tagline">{{ .description | markdownify | safeHTML }}</span>
+    </div><!--//item-->
+    {{- end -}}
+</section><!--//section-->
+{{- end -}}

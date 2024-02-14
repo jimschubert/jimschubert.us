@@ -1,0 +1,14 @@
+<div class="contact-container container-block">
+    <ul class="list-unstyled contact-list">
+        {{- with .Resume.email -}}
+        <li class="email"><i class="fas fa-envelope"></i><a href="mailto:{{.}}">{{.}}</a></li>
+        {{- end -}}
+        {{- with $phone := .Resume.phone -}}
+        {{ with $phone.home }}<li class="phone"><i class="fas fa-phone"></i><a href="tel:{{ $phone.home }}">{{ $phone.home | markdownify | safeHTML}} (H)</a></li>{{ end -}}
+        {{ with $phone.cell }}<li class="phone"><i class="fas fa-phone"></i><a href="tel:{{ $phone.cell }}">{{ $phone.cell | markdownify | safeHTML}} (C)</a></li>{{ end -}}
+        {{- end -}}
+        {{- range .Resume.links -}}
+        <li class="{{ .classes }}"><i class="fas fa-brands {{ .fontawesome }}"></i><a href="{{ .href }}" target="_blank">{{ .title  | markdownify | safeHTML}}</a></li>
+        {{- end -}}
+    </ul>
+</div><!--//contact-container-->

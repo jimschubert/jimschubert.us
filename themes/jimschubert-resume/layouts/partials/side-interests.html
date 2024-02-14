@@ -1,0 +1,10 @@
+{{ if .Resume.interests }}
+<div class="interests-container container-block">
+    <h2 class="container-block-title">Interests</h2>
+    <ul class="list-unstyled interests-list">
+        {{ range .Resume.interests }}
+        <li>{{ .  | markdownify | safeHTML}}</li>
+        {{ end }}
+    </ul>
+</div><!--//interests-->
+{{ end }}

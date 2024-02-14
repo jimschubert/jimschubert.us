@@ -1,0 +1,32 @@
+{{- $experience := .Resume.experience -}}
+{{- with $experience -}}
+<section class="section experiences-section">
+    <h2 class="section-title">
+        <span class="fa-stack fa-xs"><i class="fas fa-circle fa-stack-2x"></i><i class="fas fa-briefcase fa-stack-1x fa-inverse"></i></span>
+        Experiences
+    </h2>
+    {{- range $item := . -}}
+    <div class="item">
+        <div class="meta">
+            <div class="upper-row">
+                <h3 class="job-title">{{ $item.title  | markdownify | safeHTML}}</h3>
+                <div class="time">{{ $item.from }}{{ if $item.to }}{{ if $item.from }} - {{end }}{{ $item.to }}{{ end }}</div>
+            </div><!--//upper-row-->
+            <div class="company">{{ $item.company  | markdownify | safeHTML}} <span class="right">{{ $item.location  | markdownify | safeHTML}}</span></div>
+        </div><!--//meta-->
+        {{ with $item.long }}
+        <div class="details">
+            {{ . | markdownify | safeHTML }}
+        </div><!--//details-->
+        {{ end }}
+        {{ with $item.bullets }}
+        <ul class="list-styled">
+            {{ range $bullet := . }}
+            <li>{{ $bullet | markdownify | safeHTML}}</li>
+            {{- end -}}
+        </ul>
+        {{- end -}}
+    </div><!--//item-->
+    {{- end -}}
+</section><!--//section-->
+{{- end -}}

@@ -1,0 +1,18 @@
+{{- with .Resume.publications -}}
+<section class="section publications">
+    <h2 class="section-title"><span class="fa-stack fa-xs"><i class="fas fa-circle fa-stack-2x"></i><i class="fas fa-book-open-reader fa-stack-1x fa-inverse"></i></span>
+        Publications
+    </h2>
+    {{- if .summary -}}
+    <div class="intro">
+        <p>{{ .summary | markdownify | safeHTML}}</p>
+    </div><!--//intro-->
+    {{- end -}}
+    {{- range $publication := .list -}}
+    <div class="item">
+        <span class="publication"><a href="{{ .href }}" target="_blank">{{ .title  | markdownify | safeHTML}}</a></span>
+        <span class="publication-description">{{ .description | markdownify | safeHTML }}</span>
+    </div><!--//item-->
+    {{- end -}}
+</section><!--//section-->
+{{- end -}}
