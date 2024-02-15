@@ -421,6 +421,8 @@ projects:
   summary: |
     I have been active in Open Source officially since 2008, although I dabbled in coding for 20 years before that.
     College awoke an interest in me to share my code and creations with others.
+    
+    The following is only a subset of the 150+ open source projects I have created.
   list:
     - href: https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna
       title: New Tab Redirect!
@@ -433,6 +435,12 @@ projects:
     - href: https://github.com/jimschubert/answer
       title: jimschubert/answer
       description: A Go module providing "bubbles" (bubbletea models) which provide terminal interface functionality to replace the deprecated github.com/AlecAivazis/survey.
+    - href: https://github.com/jimschubert/venom
+      title: jimschubert/venom
+      description: |
+        A documentation command for your CLIs built on top of cobra. I wrote this to output proper documentation for
+        commands with `/` in their names. I had [contributed a fix to cobra](https://github.com/spf13/cobra/pull/1675)
+        and waited a year without merge before implementing my own library to solve the problem.
     - href: https://github.com/jimschubert/intellij-openapi-generator
       title: OpenAPI Generator Plugin
       description: An extension for Jetbrains based IDEs which provides a GUI wrapper around OpenAPI Generator.

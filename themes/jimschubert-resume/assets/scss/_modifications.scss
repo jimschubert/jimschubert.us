@@ -10,6 +10,26 @@
       right: 0;
       top: 0;
     }
+
+    a {
+      position: relative;
+      margin-right: 4px;
+      text-decoration: none; /* Remove default underline */
+    }
+
+    a::after {
+      font-family: 'FontAwesome', sans-serif;
+      content: '\f0c1'; /* Unicode for the chain icon */
+      vertical-align: middle;
+      text-align: center;
+      right: -13px; /* Adjust the spacing as needed */
+    }
+
+    a::after {
+      color: $text-color-secondary; /* Change the color to your preference */
+      font-size: 10px; /* Adjust the size as needed */
+      padding-left: 2px;
+    }
 }
 
 .sidebar-wrapper {
