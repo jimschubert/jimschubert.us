@@ -11,4 +11,6 @@ disableKinds: ["page", "section", "taxonomy", "term", "RSS", "sitemap"]
 theme: github.com/jimschubert/jimschubert-resume
 params:
   educationMain: true
-  analyticsID: G-CKY2MBVRPG
+services:
+  googleAnalytics:
+    ID: G-CKY2MBVRPG
