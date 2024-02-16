@@ -35,19 +35,12 @@ jobs:
     env:
       HUGO_VERSION: 0.122.0
     steps:
-      - name: Install Hugo CLI
-        run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-
       # with go.mod, hugo 0.122.0 on mac sets the version as 1.21.4, but on GitHub actions, it errors.
       # installing Go to the version defined in go.mod should resolve this.
       - name: Install Go
         uses: actions/setup-go@v3
         with:
           go-version-file: go.mod
-      - name: Install Dart Sass
-        run: sudo snap install dart-sass
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -69,6 +62,8 @@ jobs:
 #            --minify \
 #            --baseURL "${{ steps.pages.outputs.base_url }}/"
         run: |
+          CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@v${HUGO_VERSION}
+          hugo version
           hugo \
           --gc \
           --minify \

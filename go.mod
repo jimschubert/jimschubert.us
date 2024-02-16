@@ -1,5 +1,5 @@
 module github.com/jimschubert/jimschubert.us
 
-go 1.21.4
+go 1.22
 
 require github.com/jimschubert/jimschubert-resume v0.1.0
