@@ -38,9 +38,9 @@ jobs:
       # with go.mod, hugo 0.122.0 on mac sets the version as 1.21.4, but on GitHub actions, it errors.
       # installing Go to the version defined in go.mod should resolve this.
       - name: Install Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@v4
         with:
-          go-version-file: go.mod
+          go-version: 'stable'
       - name: Checkout
         uses: actions/checkout@v4
         with:
