@@ -71,7 +71,7 @@ experience:
     company: Redacted (security reasons)
     location: _Richmond, VA_
     bullets:
-      - Contact me for details. My current (fintech) employer information is omitted for personal security.
+      - Contact me for details. My current employer information is omitted for personal security.
     technologies:
       - Java
       - Maven
@@ -94,27 +94,6 @@ experience:
       - Collaborate with OpenAPI Generator community
       - Initial implementation of Gradle Plugin for OpenAPI Generator
       - Ongoing investigation into process improvement (tooling, pipeline, publishing)
-    technologies:
-      - Java
-      - Maven
-      - C#
-      - ASP.NET Core
-      - TestNG
-      - Scala
-      - Kotlin
-      - Gradle
-    tools:
-      - IntelliJ
-      - Docker
-      - GitHub
-
-  - from: June 2016
-    to: March 2020
-    title: Contributor Swagger Codegen
-    company: Individual, Open Source
-    location: _remote - Richmond, VA_
-    bullets:
-      - Significant number of contributions to Swagger Codegen (later forked to OpenAPI Generator)
     technologies:
       - Java
       - Maven
@@ -167,8 +146,9 @@ experience:
     company: Individual, Open Source
     location: _remote - Richmond, VA_
     bullets:
-      - Maintain C# client and ASP.NET Core server generators
-      - Collaborate with Swagger Codegen community via issues and pull requests
+      - Contributed to project until cofounding the community fork of OpenAPI Generator in 2018
+      - Maintained C# client and ASP.NET Core server generators
+      - Collaborated with Swagger Codegen community via issues and pull requests
       - Provided initial implementation of .swagger-codegen-ignore processing
       - Bug fixes in areas outside the responsibilities of my generators (Maven Plugin)
       - Contributed alpine-based Docker image, reducing image size from ~700MB to ~200MB
