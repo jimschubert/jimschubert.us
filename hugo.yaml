@@ -14,3 +14,9 @@ params:
 services:
   googleAnalytics:
     ID: G-CKY2MBVRPG
+privacy:
+  googleAnalytics:
+    anonymizeIP: true
+    disable: false
+    respectDoNotTrack: true
+    useSessionStorage: false
