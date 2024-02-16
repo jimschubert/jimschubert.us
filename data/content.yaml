@@ -396,9 +396,10 @@ experience:
   - from: September 2008
     to: February 2009
     title: Intern - Software Developer
-    company: Agility Healthcare Solutions (GE Healthcare)
+    company: GE Healthcare
     location: _Richmond, VA_
     bullets:
+      - Interned beginning with Agility Healthcare Solutions, which was acquired by GE Healthcare
       - Performed bug fixes and application enhancements in an HL7-compliant Rich Internet Application using ASP.NET 3.5 and C#
       - Worked with development team as part of a mixed Agile and Scrum methodology
       - Provided feedback on application complexity and usability to team leader
