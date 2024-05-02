@@ -68,10 +68,20 @@ experience:
   - from: June 2019
     to: Present
     title: Sr. Lead Software Engineer
-    company: Redacted (security reasons)
+    company: Redacted (contact for details)
     location: _Richmond, VA_
     bullets:
-      - Contact me for details. My current employer information is omitted for personal security.
+      - Contributed to event-driven login/authentication messaging (decommissioned)
+      - Contributed to enterprise-wide enrollments, offering technical expertise in microservices design and implementation.
+      - Influenced my organization regarding "shift-left" best practices.
+      - Resolved multiple performance and vulnerability issues through cross-team collaboration.
+      - Fixed an internal enterprise Spring library's performance degradation related to error caching (again, Caffeine cache) that impacted every application using the library.
+      - Influenced engineering patterns and practices through contributions to internal tooling, by better aligning their implementations with industry best practices; e.g. requiring branch protections on critical release branches and avoiding unnecessary re-deployments to development environments.
+      - Designed and led my team in the implementation of a tool adopted by enterprise as the preferred tool for migrating applications to ECS Fargate. This tool reads AWS configurations regardless of the application’s original CI tool and outputs the configurations necessary for the enterprise’s standard CI/CD pipeline (internal).
+      - Led my team of SMEs to support 30+ teams within my organization related to our internal CI/CD pipeline and its plugins, the enterprise-preferred internal Spring library, general AWS guidance, Java/Go/Groovy/Jenkins questions, and other best practices.
+      - Analyzed and defined organization guidance for Log4Shell vulnerability and remediation.
+      - Mentored multiple engineers, on my team and outside of it.
+      - Implemented an OpenRewrite module for various migrations of internal applications, especially in relation to Java 17 and SpringBoot 3.x upgrades forced by the end-of-support of SpringBoot 2.x.
     technologies:
       - Java
       - Maven
